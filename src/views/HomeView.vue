@@ -17,10 +17,9 @@
             </v-col>
             <v-col class='column-login column-img' cols='0' sm='4' md='4' xl='4' lg='4'>
                 <div class='text_efect'>
-                    <h1 class='text-center'><strong>Hotel Casa Barlovento</strong></h1>
-                    <p class='text_gallery text-center mt-2'>
-                        Hotel Boutique en medio de un paraíso tropical 🌴
-                        Más que un lugar 🌎 somos una experiencia
+                    <h1 class='text-center'><strong>Khipar-App</strong></h1>
+                    <p class='text_gallery text-justify mt-2'>
+                       Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Sed totam cum blanditiis iusto dolores cupiditate vero at repudiandae eaque.
                     </p>
                 </div>
             </v-col>
@@ -41,6 +40,11 @@
     width: 100% !important;
     padding: 2rem;
    background-color: rgb(205, 151, 84, 0.8) !important;
+}
+
+.column-login {
+
+  box-shadow: 2px 2px 5px #999 !important;
 }
 
 form div {
@@ -89,7 +93,7 @@ form div {
     left: 49%;
     top: 50%;
     transform: translate(-49%, -50%);
-    background-color: rgb(0, 136, 122, 0.7) !important;
+ background-color: rgb(225, 213, 201, 0.5) !important;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(8.5px);
     -webkit-backdrop-filter: blur(7.9px);
