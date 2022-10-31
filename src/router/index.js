@@ -13,18 +13,20 @@ const routes = [
   {
     path: '/crud',
     name: 'crud',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Crud.vue')
-  },
+    component: () => import('../views/admin/Crud.vue')
+  }
+  /*
     {
     path: '/estadistica',
     name: 'estadistica',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Estadistica.vue')
+    component: () => import('./views/admin/Estadistica.vue')
   },
    {
     path: '/comentarios',
     name: 'comentarios',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Comentarios.vue')
+    component: () => import( './views/admin/Comentarios.vue')
   },
+  */
 ]
 
 const router = new VueRouter({

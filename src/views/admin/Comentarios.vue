@@ -4,10 +4,10 @@
 	</div>
 </template>
 <script>
-export default{
+
+	export default{
 		components:{
-			 navbar: () => import("../components/navbarAdmin.vue")
+			 navbar: () => import("../components/admin/navbarAdmin.vue")
 		}
 	}
-
 </script>
