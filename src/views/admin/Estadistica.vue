@@ -1,13 +1,13 @@
 <template>
-	<div>
-		<navbar />
-	</div>
+    <div>
+        1
+    </div>
 </template>
 <script>
-export default{
-		components:{
-			 navbar: () => import("../components/admin/navbarAdmin.vue")
-		}
-	}
+export default {
+    name: 'Estadistica',
+    components: {
 
+    }
+}
 </script>
