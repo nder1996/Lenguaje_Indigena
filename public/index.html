@@ -21,7 +21,22 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
 </body>
-
+  <style>
+      @media (max-width: 1024px) {
+        #app {
+          overflow-y: hidden !important;
+          height: 100vh !important;
+        }
+      }
+      @media (min-width: 1026px) {
+        #app {
+          display: none !important;
+        }
+      }
+      ::-webkit-scrollbar {
+          display: none !important;
+        }
+    </style>
 </html>
 <!--
 <%= htmlWebpackPlugin.options.title %>
