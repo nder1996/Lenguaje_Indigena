@@ -1,120 +1,108 @@
 <template>
   <div class="marco_principal" fluid>
     <v-container fluid>
-      <v-row>
-        <v-col
-          class="column mx-auto"
-          v-for="i in 1"
-          :key="i"
-          cols="6"
-          sm="6"
-          md="4"
-        >
-          <v-card class="mx-auto my-12" max-width="374">
-            <template slot="progress">
-              <v-progress-linear
-                color="deep-purple"
-                height="10"
-                indeterminate
-              ></v-progress-linear>
-            </template>
-
+      <v-row style="border: 2px solid pink !important">
+        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="6" md="4">
+          <v-card class="mx-auto" max-width="230px">
             <v-img
-              height="250"
-              src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+              height="150"
+              src="https://i.pinimg.com/originals/4b/32/e2/4b32e29bce01a40249c817bd93706246.jpg"
             ></v-img>
-
-            <v-card-title>Cafe Badilico</v-card-title>
-
-            <v-card-text>
-              <v-row align="center" class="mx-0">
-                <div class="grey--text ms-4">4.5 (413)</div>
-              </v-row>
-
-              <div class="my-4 text-subtitle-1">$ • Italian, Cafe</div>
-
-              <div>
-                Small plates, salads & sandwiches - an intimate setting with 12
-                indoor seats plus patio seating.
-              </div>
-            </v-card-text>
-
-            <v-divider class="mx-4"></v-divider>
-
-            <v-card-title>Tonight's availability</v-card-title>
-
-            <v-card-text>
-              <v-chip-group
-                v-model="selection"
-                active-class="deep-purple accent-4 white--text"
-                column
-              >
-                <v-chip>
-                  <home_simbolos />
-                </v-chip>
-              </v-chip-group>
+            <v-card-title>Simbolos</v-card-title>
+            <v-card-subtitle style="margin-top: 0.1px"
+              >Traduccion al español</v-card-subtitle
+            >
+            <v-card-text class="mt-2" align="center">
+              <v-chip>
+                <home_simbolos />
+              </v-chip>
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col
-          class="column mx-auto"
-          v-for="i in 1"
-          :key="i"
-          cols="5"
-          sm="6"
-          md="4"
-        >
-          <section>
-            <home_vocales />
-          </section>
+        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="6" md="4">
+          <v-card class="mx-auto" max-width="230px">
+            <v-img
+              height="150"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvDLD51-S7EO0JcJoQxZxXKyWyBcIhSAtFmZvVZIqj78Gm6Z52mKyj1NCN9Mfy1v4g-A&usqp=CAU"
+            ></v-img>
+            <v-card-title>Vocales</v-card-title>
+            <v-card-subtitle style="margin-top: 0.1px"
+              >Traduccion al español</v-card-subtitle
+            >
+            <v-card-text class="mt-2" align="center">
+              <v-chip>
+                <home_vocales />
+              </v-chip>
+            </v-card-text>
+          </v-card>
         </v-col>
-        <v-col
-          class="column mx-auto"
-          v-for="i in 1"
-          :key="i"
-          cols="5"
-          sm="6"
-          md="4"
-        >
-          <section>
-            <home_colores />
-          </section>
+        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="6" md="4">
+          <v-card class="mx-auto" max-width="210">
+            <v-img
+              height="150"
+              src="https://www.cric-colombia.org/portal/wp-content/uploads/2017/09/colores-indigenas.jpg"
+            ></v-img>
+            <v-card-title>Colores</v-card-title>
+            <v-card-subtitle style="margin-top: 0.1px"
+              >Traduccion al español</v-card-subtitle
+            >
+            <v-card-text class="mt-2" align="center">
+              <v-chip>
+                <home_colores />
+              </v-chip>
+            </v-card-text>
+          </v-card>
         </v-col>
-        <v-col
-          class="column mx-auto"
-          v-for="i in 1"
-          :key="i"
-          cols="5"
-          sm="6"
-          md="4"
-        >
-          <section>
-            <home_numeros />
-          </section>
+     <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="6" md="4">
+          <v-card class="mx-auto" max-width="210">
+            <v-img
+              height="150"
+              src="https://sobrehistoria.com//wp-content/uploads/2012/09/numeros-arabes-480x159.jpg"
+            ></v-img>
+            <v-card-title>Numeros</v-card-title>
+            <v-card-subtitle style="margin-top: 0.1px"
+              >Traduccion al español</v-card-subtitle
+            >
+            <v-card-text class="mt-2" align="center">
+              <v-chip>
+                <home_numeros />
+              </v-chip>
+            </v-card-text>
+          </v-card>
         </v-col>
-        <v-col
-          class="column mx-auto"
-          v-for="i in 1"
-          :key="i"
-          cols="5"
-          sm="6"
-          md="4"
-        >
-          <section>
-            <home_comandos />
-          </section>
+   <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="6" md="4">
+          <v-card class="mx-auto" max-width="210">
+            <v-img
+              height="150"
+              src="http://c.files.bbci.co.uk/10073/production/_97215656_naana.jpg"
+            ></v-img>
+            <v-card-title>Comandos</v-card-title>
+            <v-card-subtitle style="margin-top: 0.1px"
+              >Traduccion al español</v-card-subtitle
+            >
+            <v-card-text class="mt-2" align="center">
+              <v-chip>
+                <home_comandos />
+              </v-chip>
+            </v-card-text>
+          </v-card>
         </v-col>
-        <v-col
-          class="column mx-auto"
-          v-for="i in 1"
-          :key="i"
-          cols="5"
-          sm="6"
-          md="4"
-        >
-          <section>
-            <home_abecedario />
-          </section>
+   <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="6" md="4">
+          <v-card class="mx-auto" max-width="210">
+            <v-img
+              height="150"
+              src="https://us.123rf.com/450wm/solodkayamari/solodkayamari2104/solodkayamari210400023/169707661-ni%C3%B1os-decorativos-abc-en-estilo-dino-divertido-alfabeto-creativo-aislado-ilustraci%C3%B3n-vectorial.jpg?ver=6"
+            ></v-img>
+            <v-card-title>Abecedario</v-card-title>
+            <v-card-subtitle style="margin-top: 0.1px"
+              >Traduccion al español</v-card-subtitle
+            >
+            <v-card-text class="mt-2" align="center">
+              <v-chip>
+                <home_abecedario />
+              </v-chip>
+            </v-card-text>
+          </v-card>
         </v-col>
       </v-row>
     </v-container>
@@ -126,7 +114,8 @@
   border: 2px solid red !important;
 }
 .column {
-  margin-top: 1rem !important;
+  margin: 0.5rem !important;
+  padding: 0.2rem !important;
   border: 2px solid orange !important;
 }
 </style>

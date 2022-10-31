@@ -1,37 +1,5 @@
    <!--
-          <v-col class="Simbolos" v-for="i in 1" :key="i" cols="12" sm="6" md="4">
-          <v-card class="mx-auto" max-width="300">
-            <template slot="progress">
-              <v-progress-linear
-                color="deep-purple"
-                height="10"
-                indeterminate
-              ></v-progress-linear>
-            </template>
-
-            <v-img
-              height="200"
-              src="https://i.pinimg.com/originals/4b/32/e2/4b32e29bce01a40249c817bd93706246.jpg"
-            ></v-img>
-
-            <v-card-title>Símbolos</v-card-title>
-
-            <v-card-text>
-              <div class="my-4 text-subtitle-1">IDIOMA WOUNAAN</div>
-
-              <div>
-                <audio
-                  style="width: 100% !important"
-                  src="/assets/Hal.mp3"
-                  controls
-                ></audio>
-              </div>
-            </v-card-text>
-
-            <v-divider class="mx-4"></v-divider>
-            <v-card-title> Traduccion al español</v-card-title>
-          </v-card>
-        </v-col>
+         
         <v-col class="Vocales" v-for="i in 1" :key="i" cols="12" sm="6" md="4">
           <v-card class="mx-auto" max-width="300">
             <template slot="progress">
