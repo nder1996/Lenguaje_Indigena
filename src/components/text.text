@@ -1,0 +1,205 @@
+   <!--
+          <v-col class="Simbolos" v-for="i in 1" :key="i" cols="12" sm="6" md="4">
+          <v-card class="mx-auto" max-width="300">
+            <template slot="progress">
+              <v-progress-linear
+                color="deep-purple"
+                height="10"
+                indeterminate
+              ></v-progress-linear>
+            </template>
+
+            <v-img
+              height="200"
+              src="https://i.pinimg.com/originals/4b/32/e2/4b32e29bce01a40249c817bd93706246.jpg"
+            ></v-img>
+
+            <v-card-title>Símbolos</v-card-title>
+
+            <v-card-text>
+              <div class="my-4 text-subtitle-1">IDIOMA WOUNAAN</div>
+
+              <div>
+                <audio
+                  style="width: 100% !important"
+                  src="/assets/Hal.mp3"
+                  controls
+                ></audio>
+              </div>
+            </v-card-text>
+
+            <v-divider class="mx-4"></v-divider>
+            <v-card-title> Traduccion al español</v-card-title>
+          </v-card>
+        </v-col>
+        <v-col class="Vocales" v-for="i in 1" :key="i" cols="12" sm="6" md="4">
+          <v-card class="mx-auto" max-width="300">
+            <template slot="progress">
+              <v-progress-linear
+                color="deep-purple"
+                height="10"
+                indeterminate
+              ></v-progress-linear>
+            </template>
+
+            <v-img
+              height="200"
+              contain
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvDLD51-S7EO0JcJoQxZxXKyWyBcIhSAtFmZvVZIqj78Gm6Z52mKyj1NCN9Mfy1v4g-A&usqp=CAU"
+            ></v-img>
+
+            <v-card-title>vocales</v-card-title>
+
+            <v-card-text>
+              <div class="my-4 text-subtitle-1">IDIOMA WOUNAAN</div>
+
+              <div>
+                <audio
+                  style="width: 100% !important"
+                  src="/assets/Hal.mp3"
+                  controls
+                ></audio>
+              </div>
+            </v-card-text>
+
+            <v-divider class="mx-4"></v-divider>
+            <v-card-title> Traduccion al español</v-card-title>
+          </v-card>
+        </v-col>
+        <v-col class="Colores" v-for="i in 1" :key="i" cols="12" sm="6" md="4">
+          <v-card class="mx-auto" max-width="300">
+            <template slot="progress">
+              <v-progress-linear
+                color="deep-purple"
+                height="10"
+                indeterminate
+              ></v-progress-linear>
+            </template>
+
+            <v-img
+              height="200"
+              contain
+              src="https://www.cric-colombia.org/portal/wp-content/uploads/2017/09/colores-indigenas.jpg"
+            ></v-img>
+
+            <v-card-title>Colores</v-card-title>
+
+            <v-card-text>
+              <div class="my-4 text-subtitle-1">IDIOMA WOUNAAN</div>
+
+              <div>
+                <audio
+                  style="width: 100% !important"
+                  src="/assets/Hal.mp3"
+                  controls
+                ></audio>
+              </div>
+            </v-card-text>
+
+            <v-divider class="mx-4"></v-divider>
+            <v-card-title> Traduccion al español</v-card-title>
+          </v-card>
+        </v-col>
+        <v-col class="Numeros" v-for="i in 1" :key="i" cols="12" sm="6" md="4">
+          <v-card class="mx-auto" max-width="300">
+            <template slot="progress">
+              <v-progress-linear
+                color="deep-purple"
+                height="10"
+                indeterminate
+              ></v-progress-linear>
+            </template>
+
+            <v-img
+              height="200"
+              contain
+              src="https://sobrehistoria.com//wp-content/uploads/2012/09/numeros-arabes-480x159.jpg"
+            ></v-img>
+
+            <v-card-title>Numeros</v-card-title>
+
+            <v-card-text>
+              <div class="my-4 text-subtitle-1">IDIOMA WOUNAAN</div>
+
+              <div>
+                <audio
+                  style="width: 100% !important"
+                  src="/assets/Hal.mp3"
+                  controls
+                ></audio>
+              </div>
+            </v-card-text>
+
+            <v-divider class="mx-4"></v-divider>
+            <v-card-title> Traduccion al español</v-card-title>
+          </v-card>
+        </v-col>
+        <v-col class="Comandos" v-for="i in 1" :key="i" cols="12" sm="6" md="4">
+          <v-card class="mx-auto" max-width="300">
+            <template slot="progress">
+              <v-progress-linear
+                color="deep-purple"
+                height="10"
+                indeterminate
+              ></v-progress-linear>
+            </template>
+
+            <v-img
+              height="200"
+              contain
+              src="http://c.files.bbci.co.uk/10073/production/_97215656_naana.jpg"
+            ></v-img>
+
+            <v-card-title>Comandos</v-card-title>
+
+            <v-card-text>
+              <div class="my-4 text-subtitle-1">IDIOMA WOUNAAN</div>
+
+              <div>
+                <audio
+                  style="width: 100% !important"
+                  src="/assets/Hal.mp3"
+                  controls
+                ></audio>
+              </div>
+            </v-card-text>
+
+            <v-divider class="mx-4"></v-divider>
+            <v-card-title> Traduccion al español</v-card-title>
+          </v-card>
+        </v-col>
+        <v-col class="Abecedario" v-for="i in 1" :key="i" cols="12" sm="6" md="4">
+          <v-card class="mx-auto" max-width="300">
+            <template slot="progress">
+              <v-progress-linear
+                color="deep-purple"
+                height="10"
+                indeterminate
+              ></v-progress-linear>
+            </template>
+
+            <v-img
+              height="200"
+              contain
+              src="https://us.123rf.com/450wm/solodkayamari/solodkayamari2104/solodkayamari210400023/169707661-ni%C3%B1os-decorativos-abc-en-estilo-dino-divertido-alfabeto-creativo-aislado-ilustraci%C3%B3n-vectorial.jpg?ver=6"
+            ></v-img>
+
+            <v-card-title>Abecedario</v-card-title>
+
+            <v-card-text>
+              <div class="my-4 text-subtitle-1">IDIOMA WOUNAAN</div>
+
+              <div>
+                <audio
+                  style="width: 100% !important"
+                  src="/assets/Hal.mp3"
+                  controls
+                ></audio>
+              </div>
+            </v-card-text>
+
+            <v-divider class="mx-4"></v-divider>
+            <v-card-title> Traduccion al español</v-card-title>
+          </v-card>
+        </v-col>
+        -->
