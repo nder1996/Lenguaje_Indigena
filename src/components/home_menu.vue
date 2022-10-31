@@ -1,9 +1,16 @@
 <template>
-  <div class="marco_principal">
-    <v-container>
+  <div class="marco_principal" fluid>
+    <v-container fluid>
       <v-row>
-        <v-col v-for="i in 5" :key="i">
-          <v-card class="mx-auto my-7" max-width="334">
+        <v-col
+          class="column mx-auto"
+          v-for="i in 1"
+          :key="i"
+          cols="6"
+          sm="6"
+          md="4"
+        >
+          <v-card class="mx-auto my-12" max-width="374">
             <template slot="progress">
               <v-progress-linear
                 color="deep-purple"
@@ -21,15 +28,6 @@
 
             <v-card-text>
               <v-row align="center" class="mx-0">
-                <v-rating
-                  :value="4.5"
-                  color="amber"
-                  dense
-                  half-increments
-                  readonly
-                  size="14"
-                ></v-rating>
-
                 <div class="grey--text ms-4">4.5 (413)</div>
               </v-row>
 
@@ -51,22 +49,72 @@
                 active-class="deep-purple accent-4 white--text"
                 column
               >
-                <v-chip>5:30PM</v-chip>
-
-                <v-chip>7:30PM</v-chip>
-
-                <v-chip>8:00PM</v-chip>
-
-                <v-chip>9:00PM</v-chip>
+                <v-chip>
+                  <home_simbolos />
+                </v-chip>
               </v-chip-group>
             </v-card-text>
-
-            <v-card-actions>
-              <v-btn color="deep-purple lighten-2" text @click="reserve">
-                Reserve
-              </v-btn>
-            </v-card-actions>
           </v-card>
+        </v-col>
+        <v-col
+          class="column mx-auto"
+          v-for="i in 1"
+          :key="i"
+          cols="5"
+          sm="6"
+          md="4"
+        >
+          <section>
+            <home_vocales />
+          </section>
+        </v-col>
+        <v-col
+          class="column mx-auto"
+          v-for="i in 1"
+          :key="i"
+          cols="5"
+          sm="6"
+          md="4"
+        >
+          <section>
+            <home_colores />
+          </section>
+        </v-col>
+        <v-col
+          class="column mx-auto"
+          v-for="i in 1"
+          :key="i"
+          cols="5"
+          sm="6"
+          md="4"
+        >
+          <section>
+            <home_numeros />
+          </section>
+        </v-col>
+        <v-col
+          class="column mx-auto"
+          v-for="i in 1"
+          :key="i"
+          cols="5"
+          sm="6"
+          md="4"
+        >
+          <section>
+            <home_comandos />
+          </section>
+        </v-col>
+        <v-col
+          class="column mx-auto"
+          v-for="i in 1"
+          :key="i"
+          cols="5"
+          sm="6"
+          md="4"
+        >
+          <section>
+            <home_abecedario />
+          </section>
         </v-col>
       </v-row>
     </v-container>
@@ -74,11 +122,24 @@
 </template>
 <style scoped>
 .marco_principal {
+  height: 100% !important;
   border: 2px solid red !important;
+}
+.column {
+  margin-top: 1rem !important;
+  border: 2px solid orange !important;
 }
 </style>
 <script>
 export default {
   name: "home_menu",
+  components: {
+    home_simbolos: () => import("../components/home_simbolos.vue"),
+    home_vocales: () => import("../components/home_vocales.vue"),
+    home_colores: () => import("../components/home_colores.vue"),
+    home_numeros: () => import("../components/home_numeros.vue"),
+    home_comandos: () => import("../components/home_comandos.vue"),
+    home_abecedario: () => import("../components/home_abecedario.vue"),
+  },
 };
 </script>
