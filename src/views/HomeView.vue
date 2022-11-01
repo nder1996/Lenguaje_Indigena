@@ -42,7 +42,7 @@
                 <home_menu />
               </v-card>
             </v-tab-item>
-            <v-tab-item>
+            <v-tab-item style="overflow: scroll !important">
               <v-card flat>
                 <v-card-text>
                       <encuesta_1 />
