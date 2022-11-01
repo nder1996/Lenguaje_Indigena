@@ -1,8 +1,8 @@
 <template>
   <div class="marco_principal" fluid>
     <v-container fluid>
-      <v-row style="border: 2px solid pink !important">
-        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="6" md="4">
+      <v-row align="center" justify="center">
+        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="3" md="3">
           <v-card class="mx-auto" max-width="230px">
             <v-img
               height="150"
@@ -19,7 +19,7 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="6" md="4">
+        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="3" md="3">
           <v-card class="mx-auto" max-width="230px">
             <v-img
               height="150"
@@ -36,7 +36,7 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="6" md="4">
+        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="3" md="3">
           <v-card class="mx-auto" max-width="210">
             <v-img
               height="150"
@@ -53,7 +53,7 @@
             </v-card-text>
           </v-card>
         </v-col>
-     <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="6" md="4">
+        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="3" md="3">
           <v-card class="mx-auto" max-width="210">
             <v-img
               height="150"
@@ -70,7 +70,7 @@
             </v-card-text>
           </v-card>
         </v-col>
-   <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="6" md="4">
+        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="3" md="3">
           <v-card class="mx-auto" max-width="210">
             <v-img
               height="150"
@@ -87,7 +87,7 @@
             </v-card-text>
           </v-card>
         </v-col>
-   <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="6" md="4">
+        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="3" md="3">
           <v-card class="mx-auto" max-width="210">
             <v-img
               height="150"
@@ -111,12 +111,10 @@
 <style scoped>
 .marco_principal {
   height: 100% !important;
-  border: 2px solid red !important;
 }
 .column {
   margin: 0.5rem !important;
   padding: 0.2rem !important;
-  border: 2px solid orange !important;
 }
 </style>
 <script>

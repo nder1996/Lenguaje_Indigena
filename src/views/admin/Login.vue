@@ -112,7 +112,6 @@ form div {
 .creadores {
     margin: 0;
     margin-bottom: 0.2rem;
-    #border: 2px solid red;
 }
 </style>
 <script>
