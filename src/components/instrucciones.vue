@@ -1,10 +1,12 @@
 <template>
-  <div>
+  <div style="overflow:hidden">
     <v-timeline :dense="$vuetify.breakpoint.smAndDown">
       <v-timeline-item color="purple lighten-2" fill-dot right>
-        <v-card>
+        <v-card min-width="70%" max-width="100%">
           <v-card-title class="purple lighten-2">
-            <v-icon dark size="30" class="mr-4"> mdi-head-question-outline </v-icon>
+            <v-icon dark size="30" class="mr-4">
+              mdi-head-question-outline
+            </v-icon>
             <h5 class="white--text font-weight-light">QUE ES KHIPAR - APP</h5>
           </v-card-title>
           <v-container>
@@ -23,9 +25,11 @@
       </v-timeline-item>
 
       <v-timeline-item color="amber lighten-1" fill-dot left small>
-        <v-card>
+        <v-card min-width="70%" max-width="100%">
           <v-card-title class="amber lighten-1 justify-end">
-            <h5 class="mr-4 white--text font-weight-light">¿COMO USAR LA APP?</h5>
+            <h5 class="mr-4 white--text font-weight-light">
+              ¿COMO USAR LA APP?
+            </h5>
             <v-icon dark size="30">mdi-lightbulb-question</v-icon>
           </v-card-title>
           <v-container>
@@ -44,12 +48,13 @@
       </v-timeline-item>
 
       <v-timeline-item color="cyan lighten-1" fill-dot right>
-        <v-card>
+        <v-card min-width="70%" max-width="100%">
           <v-card-title class="cyan lighten-1">
-          
-                     <v-icon class="mr-4" dark size="20"> mdi-flag-checkered</v-icon> 
-             
-            <h6 class="white--text font-weight-light">¿CUAL ES LA FINALIDAD DE LA APP?</h6>
+            <v-icon class="mr-4" dark size="20"> mdi-flag-checkered</v-icon>
+
+            <h6 class="white--text font-weight-light">
+              ¿CUAL ES LA FINALIDAD DE LA APP?
+            </h6>
           </v-card-title>
           <v-container>
             <v-row>
@@ -63,9 +68,11 @@
       </v-timeline-item>
 
       <v-timeline-item color="red lighten-1" fill-dot left small>
-        <v-card>
+        <v-card min-width="70%" max-width="100%">
           <v-card-title class="red lighten-1 justify-end">
-            <h4 class="mr-4 white--text font-weight-light">LA CULTURA WOUNAAN</h4>
+            <h4 class="mr-4 white--text font-weight-light">
+              LA CULTURA WOUNAAN
+            </h4>
             <v-icon dark size="30"> mdi-sprout-outline</v-icon>
           </v-card-title>
           <v-container>
@@ -78,25 +85,6 @@
                 scaevola imperdiet nec ut, sed euismod convenire principes at.
                 Est et nobis iisque percipit, an vim zril disputando
                 voluptatibus.
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-card>
-      </v-timeline-item>
-
-      <v-timeline-item color="green lighten-1" fill-dot right>
-        <v-card>
-          <v-card-title class="green lighten-1">
-            <v-icon class="mr-4" dark size="42"> mdi-phone-in-talk </v-icon>
-            <h2 class="text-h4 white--text font-weight-light">Title 5</h2>
-          </v-card-title>
-          <v-container>
-            <v-row>
-              <v-col>
-                Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
-                scaevola imperdiet nec ut, sed euismod convenire principes at.
-                Est et nobis iisque percipit, an vim zril disputando
-                voluptatibus, vix an salutandi sententiae.
               </v-col>
             </v-row>
           </v-container>

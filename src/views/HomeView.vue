@@ -1,10 +1,25 @@
 <template>
   <div>
     <v-app>
-      <v-footer app style="padding: 0 !important; margin: 0 !important;width:100% !important;border:2px solid blue" fluid>
+      <v-footer
+        app
+        style="
+          padding: 0 !important;
+          margin: 0 !important;
+          width: 100% !important;
+        "
+        fluid
+      >
         <!-- -->
         <v-card style="display: flex; flex-direction: column-reverse" fluid>
-          <v-toolbar dark color="black">
+          <v-toolbar
+            dark
+            color="black"
+            style="
+              background-color: rgb(205, 151, 84, 0.8) !important;
+              border: none !important;
+            "
+          >
             <template>
               <v-tabs v-model="tabs" centered>
                 <v-tab v-for="n in btn_home" :key="n">
@@ -13,21 +28,21 @@
               </v-tabs>
             </template>
           </v-toolbar>
-          <v-tabs-items v-model="tabs" style="height: 90vh;">
-            <v-tab-item style="overflow: scroll;">
+          <v-tabs-items class="pa-1 control_scroll" v-model="tabs">
+            <v-tab-item style="overflow: scroll">
               <v-card flat>
                 <v-card-text>
-                    <mensaje_bienvenida />
-                    <instrucciones_bienvenida />
+                  <mensaje_bienvenida />
+                  <instrucciones_bienvenida />
                 </v-card-text>
               </v-card>
             </v-tab-item>
-            <v-tab-item style="border:2px solid pink !important;overflow: scroll !important;">
+            <v-tab-item style="overflow: scroll !important">
               <v-card flat>
                 <home_menu />
               </v-card>
             </v-tab-item>
-            <v-tab-item >
+            <v-tab-item>
               <v-card flat>
                 <v-card-title class="text-h5">
                   An even better title
@@ -54,7 +69,33 @@
     </v-app>
   </div>
 </template>
-<style scoped></style>
+<style scoped>
+@media (max-width: 375px) {
+  .control_scroll{
+    height: 91.5vh !important;
+  }
+}
+ @media (min-width: 376px) and (max-width: 414px) {
+  .control_scroll{
+    height: 93.6vh !important;
+  }
+}
+
+@media (min-width: 415px) and (max-width: 540px) {
+  .control_scroll{
+    height: 93vh !important;
+  }
+}
+
+@media (min-width: 541px) and (max-width: 640px) {
+  .control_scroll{
+    height: 93vh !important;
+  }
+}
+
+
+
+</style>
 <script>
 /*
 import vocales from '../components/Vocales.vue'
@@ -62,9 +103,9 @@ import vocales from '../components/Vocales.vue'
 export default {
   name: "Nabvar",
   components: {
-       mensaje_bienvenida: () => import("../components/bienvenida.vue"),
-       instrucciones_bienvenida: () => import("../components/instrucciones.vue"),
-       home_menu: () => import("../components/home_menu.vue")
+    mensaje_bienvenida: () => import("../components/bienvenida.vue"),
+    instrucciones_bienvenida: () => import("../components/instrucciones.vue"),
+    home_menu: () => import("../components/home_menu.vue"),
     /*vocales*/
   },
   data() {
