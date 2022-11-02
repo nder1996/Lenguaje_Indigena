@@ -45,6 +45,7 @@
             <v-tab-item style="overflow: scroll !important">
               <v-card flat>
                 <v-card-text>
+                   <mensaje_encuesta />
                       <encuesta_1 />
                 </v-card-text>
               </v-card>
@@ -119,7 +120,7 @@ export default {
     instrucciones_bienvenida: () => import("../components/instrucciones.vue"),
     home_menu: () => import("../components/home_menu.vue"),
     encuesta_1: () => import("../components/encuesta_form_1.vue"),
-    encuesta_2: () => import("../components/encuesta_form_1.vue"),
+    mensaje_encuesta: () => import("../components/mensaje_encuesta.vue"),
     encuesta_3: () => import("../components/encuesta_form_1.vue"),
     /*vocales*/
   },

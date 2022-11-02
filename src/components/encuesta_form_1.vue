@@ -1,21 +1,52 @@
 <template>
   <div>
-    <v-form v-model="valid">
+    <v-form v-model="valid" class="mt-5">
       <v-container>
         <v-row>
+          <v-col>
+            <v-row >
+              <v-col cols="12" align="center" justify="center">
+                <label>¿Perteneces alguna tribu indigena?</label>
+              </v-col>
+              <v-col cols="12"    align="center"
+                justify="center"
+                style="display: flex; justify-content: center">
+                <v-chip-group active-class="green white--text">
+                  <v-chip class="ma-2 justify-center" color="success" outlined>
+                    Si
+                  </v-chip>
+                  <v-chip
+                    class="ma-2 justify-center"
+                    color="deep-orange"
+                    outlined
+                  >
+                    No
+                  </v-chip>
+                </v-chip-group>
+              </v-col>
+            </v-row>
+          </v-col>
           <v-col cols="12" md="4">
             <v-row align="center" justify="center">
               <v-col cols="12" align="center" justify="center">
                 <label>¿Te gusto la aplicacion?</label></v-col
               >
-              <v-col cols="12" align="center" justify="center"  style="display:flex;justify-content:center;">
-                <v-chip-group active-class="green white--text"
-                >
+              <v-col
+                cols="12"
+                align="center"
+                justify="center"
+                style="display: flex; justify-content: center"
+              >
+                <v-chip-group active-class="green white--text">
                   <v-chip class="ma-2 justify-center" color="success" outlined>
                     <v-icon left> mdi-emoticon-happy-outline</v-icon>
                     Si
                   </v-chip>
-                  <v-chip class="ma-2 justify-center" color="deep-orange" outlined>
+                  <v-chip
+                    class="ma-2 justify-center"
+                    color="deep-orange"
+                    outlined
+                  >
                     <v-icon left> mdi-emoticon-angry </v-icon>
                     No
                   </v-chip>
@@ -46,7 +77,7 @@
           </v-col>
           <v-col cols="12" md="4">
             <v-textarea
-              filled
+              outlined
               v-model="lastname"
               label="¿Comentanos porque?"
               required
@@ -55,7 +86,9 @@
         </v-row>
         <v-row align="center" jusitfy="center">
           <v-col cols="12" align="center" jusitfy="center">
-            <v-btn rounded color="success" outlined dark> Enviar Calificanos </v-btn>
+            <v-btn rounded color="success" outlined dark>
+              Enviar Calificanos
+            </v-btn>
           </v-col>
         </v-row>
       </v-container>
