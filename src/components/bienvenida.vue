@@ -8,7 +8,7 @@
       -->
 
       <v-dialog v-model="dialog" max-width="290">
-        <v-card outlined shaped style="background-color: rgb(205, 151, 84) !important;" dark>
+        <v-card outlined shaped style="background-color: rgb(205, 151, 84,0.7) !important;" dark>
           <v-card-title class="text-h4 justify-center text--light">Bienvenido</v-card-title>
           <v-card-text class="text-justify mt-3">
             <v-img src="https://i.postimg.cc/KvBNdkSv/35-359193-couple-clipart-cowboy-pareja-de-indios-animados-removebg-preview-1.png" />
