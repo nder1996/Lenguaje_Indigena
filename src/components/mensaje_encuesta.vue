@@ -5,7 +5,7 @@
       v-model="dialog"
       max-width="312"
     >
-      <v-card outlined shaped style="background-color: rgb(205, 151, 84,0.7) !important;" dark>
+      <v-card outlined shaped style="background-color: rgb(205, 151, 84,0.9) !important;" dark>
      
        <v-card-title class="text-h6 text-center">
            Para nosotros es importante saber tu opinion
