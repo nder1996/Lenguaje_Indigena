@@ -82,7 +82,7 @@
 }
 
 .formulario{
-  padding:3rem !important;
+  padding:2rem !important;
   #border:2px solid black !important;
 }
 </style>

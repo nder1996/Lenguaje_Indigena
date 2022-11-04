@@ -8,81 +8,36 @@
         transition="dialog-bottom-transition"
       >
         <template v-slot:activator="{ on, attrs }">
-          <v-btn color="primary" dark v-bind="attrs" v-on="on">
+          <v-btn color="blue-grey darken-1" dark v-bind="attrs" v-on="on">
             Simbolos
           </v-btn>
         </template>
         <v-card>
-          <v-toolbar dark color="primary">
+          <v-toolbar
+            dark
+            style="background-color: rgb(205, 151, 84, 0.9) !important"
+          >
             <v-btn icon dark @click="dialog = false">
               <v-icon>mdi-close</v-icon>
             </v-btn>
-            <v-toolbar-title>Settings</v-toolbar-title>
+            <v-toolbar-title>Simbolos</v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-toolbar-items>
-              <v-btn dark text @click="dialog = false"> Save </v-btn>
-            </v-toolbar-items>
           </v-toolbar>
-          <v-list three-line subheader>
-            <v-subheader>User Controls</v-subheader>
-            <v-list-item>
-              <v-list-item-content>
-                <v-list-item-title>Content filtering</v-list-item-title>
-                <v-list-item-subtitle
-                  >Set the content filtering level to restrict apps that can be
-                  downloaded</v-list-item-subtitle
-                >
-              </v-list-item-content>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-content>
-                <v-list-item-title>Password</v-list-item-title>
-                <v-list-item-subtitle
-                  >Require password for purchase or use password to restrict
-                  purchase</v-list-item-subtitle
-                >
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
-          <v-divider></v-divider>
-          <v-list three-line subheader>
-            <v-subheader>General</v-subheader>
-            <v-list-item>
-              <v-list-item-action>
-                <v-checkbox v-model="notifications"></v-checkbox>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>Notifications</v-list-item-title>
-                <v-list-item-subtitle
-                  >Notify me about updates to apps or games that I
-                  downloaded</v-list-item-subtitle
-                >
-              </v-list-item-content>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-action>
-                <v-checkbox v-model="sound"></v-checkbox>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>Sound</v-list-item-title>
-                <v-list-item-subtitle
-                  >Auto-update apps at any time. Data charges may
-                  apply</v-list-item-subtitle
-                >
-              </v-list-item-content>
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-action>
-                <v-checkbox v-model="widgets"></v-checkbox>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>Auto-add widgets</v-list-item-title>
-                <v-list-item-subtitle
-                  >Automatically add home screen widgets</v-list-item-subtitle
-                >
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
+          <v-card-text class="mt-10">
+            <v-row>
+              <v-col v-for="i in 5" :key="i" cols="12" sm="4" md="4" align="center" jusitfy="center">
+                <v-card elevation="2" width="300">
+                  <v-img
+                    height="150"
+                    src="https://cdn77.pressenza.com/wp-content/uploads/2022/03/Indigenas-Leyes-Incumplicas_Ilustracion-Didier-Pulgarin-820x559.jpg"
+                  ></v-img>
+                  <v-card-title>Simbolo idioma indigena</v-card-title>
+                  <v-card-subtitle class="text-start">Simbolo idioma español</v-card-subtitle>
+                  <audio class="mt-3 mb-3" src="https://lenguasdecolombia.caroycuervo.gov.co/ICCadmin/ICC/documentos/audio/Cancion_Helena_waunana.mp3" controls style="width:90%"></audio>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-card-text>
         </v-card>
       </v-dialog>
     </v-row>
@@ -90,14 +45,11 @@
 </template>
 <style scoped></style>
 <script>
- export default {
-    data () {
-      return {
-        dialog: false,
-        notifications: false,
-        sound: true,
-        widgets: false,
-      }
-    },
-  }
+export default {
+  data() {
+    return {
+      dialog: false,
+    };
+  },
+};
 </script>

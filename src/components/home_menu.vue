@@ -1,9 +1,9 @@
 <template>
-  <div class="marco_principal" fluid>
-    <v-container fluid>
+  <div class="marco_principal mt-5" fluid>
+    <v-container class="mt-5" fluid>
       <v-row align="center" justify="center">
-        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="3" md="3">
-          <v-card class="mx-auto" max-width="230px">
+        <v-col class="column"  cols="8" sm="3" md="3">
+          <v-card class="mx-auto card_categoria">
             <v-img
               height="150"
               src="https://i.pinimg.com/originals/4b/32/e2/4b32e29bce01a40249c817bd93706246.jpg"
@@ -19,8 +19,8 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="3" md="3">
-          <v-card class="mx-auto" max-width="230px">
+        <v-col class="column"  cols="8" sm="3" md="3">
+          <v-card class="mx-auto card_categoria">
             <v-img
               height="150"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvDLD51-S7EO0JcJoQxZxXKyWyBcIhSAtFmZvVZIqj78Gm6Z52mKyj1NCN9Mfy1v4g-A&usqp=CAU"
@@ -36,8 +36,8 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="3" md="3">
-          <v-card class="mx-auto" max-width="210">
+        <v-col class="column"  cols="8" sm="3" md="3">
+          <v-card class="mx-auto card_categoria">
             <v-img
               height="150"
               src="https://www.cric-colombia.org/portal/wp-content/uploads/2017/09/colores-indigenas.jpg"
@@ -53,8 +53,8 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="3" md="3">
-          <v-card class="mx-auto" max-width="210">
+        <v-col class="column" cols="8" sm="3" md="3">
+          <v-card class="mx-auto card_categoria">
             <v-img
               height="150"
               src="https://sobrehistoria.com//wp-content/uploads/2012/09/numeros-arabes-480x159.jpg"
@@ -70,8 +70,8 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="3" md="3">
-          <v-card class="mx-auto" max-width="210">
+        <v-col class="column" cols="8" sm="3" md="3">
+          <v-card class="mx-auto card_categoria">
             <v-img
               height="150"
               src="http://c.files.bbci.co.uk/10073/production/_97215656_naana.jpg"
@@ -87,8 +87,8 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col class="column" v-for="i in 1" :key="i" cols="10" sm="3" md="3">
-          <v-card class="mx-auto" max-width="210">
+        <v-col class="column" cols="8" sm="3" md="3">
+          <v-card class="mx-auto card_categoria">
             <v-img
               height="150"
               src="https://us.123rf.com/450wm/solodkayamari/solodkayamari2104/solodkayamari210400023/169707661-ni%C3%B1os-decorativos-abc-en-estilo-dino-divertido-alfabeto-creativo-aislado-ilustraci%C3%B3n-vectorial.jpg?ver=6"
@@ -113,8 +113,13 @@
   height: 100% !important;
 }
 .column {
+  #border: 2px solid red !important;
   margin: 0.5rem !important;
   padding: 0.2rem !important;
+}
+.card_categoria {
+  width:55vw !Important;
+  #border:2px solid orange !important;
 }
 </style>
 <script>
