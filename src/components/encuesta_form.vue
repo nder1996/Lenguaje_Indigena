@@ -1,18 +1,12 @@
 <template>
-  <div class="card_encuesta">
+  <v-card class="card_encuesta" width="400" style="border:2px solid pink !important">
     <v-form v-model="valid" dark>
       <v-container>
         <v-row>
-          <v-col
-            cols="12"
-            style="
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: space-between;
-            "
-          >
-            <label>¿Perteneces alguna tribu indigena?</label>
+          <v-col class="column" cols="6" sm="6" md="12">
+            <h6>¿Perteneces alguna tribu indigena?</h6>
+          </v-col>
+          <v-col class="column" cols="6" sm="6" md="12">
             <v-chip-group active-class="green white--text">
               <v-chip class="ma-2 justify-center" color="success" outlined>
                 Si
@@ -22,16 +16,11 @@
               </v-chip>
             </v-chip-group>
           </v-col>
-          <v-col
-            cols="12"
-            style="
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: space-between;
-            "
-          >
-            <label>¿Te gusto la aplicacion?</label>
+
+          <v-col class="column" cols="6" sm="6" md="12">
+            <h6>¿Te gusto la aplicacion?</h6>
+          </v-col>
+          <v-col>
             <v-chip-group active-class="green white--text">
               <v-chip class="ma-2 justify-center" color="success" outlined>
                 <v-icon left> mdi-emoticon-happy-outline</v-icon>
@@ -43,49 +32,51 @@
               </v-chip>
             </v-chip-group>
           </v-col>
-          <v-col cols="12">
-            <v-row align="center" jusitfy="center">
-              <v-col cols="12" align="center" jusitfy="center">
-                <label>Calificanos</label>
-              </v-col>
-              <v-col cols="12" align="center" jusitfy="center">
-                <v-rating
-                  background-color="orange lighten-3"
-                  color="orange"
-                  large
-                  empty-icon="mdi-star-outline"
-                  full-icon="mdi-star"
-                  half-icon="mdi-star-outline"
-                  hover
-                  length="5"
-                  size="15"
-                  value="3"
-                ></v-rating>
-              </v-col>
-            </v-row>
+          <v-col class="column" cols="5" sm="6" md="12">
+            <h6>Calificanos</h6>
           </v-col>
-          <v-col cols="12">
+          <v-col class="column" cols="7" sm="6" md="12">
+            <v-rating
+              background-color="orange lighten-3"
+              color="orange"
+              empty-icon="mdi-star-outline"
+              full-icon="mdi-star"
+              half-icon="mdi-star-outline"
+              hover
+              length="5"
+              value="0"
+            ></v-rating>
+          </v-col>
+          <v-col class="column" cols="12">
             <v-textarea
-              height="100px"
+              height="120px"
               outlined
               v-model="lastname"
               label="¿Comentanos porque?"
               required
             ></v-textarea>
           </v-col>
-          <v-col cols="12" align="center" jusitfy="center">
+          <v-col class="column d-flex justify-center" cols="12">
             <v-btn rounded color="success" outlined dark small>
               Enviar Calificacion
-            </v-btn></v-col
-          >
+            </v-btn>
+          </v-col>
         </v-row>
       </v-container>
     </v-form>
-  </div>
+  </v-card>
 </template>
 <style scoped>
 .card_encuesta {
-  margin: auto !important;
+  /*margin:auto ;
+  width:80vw !important;
+  height:100% !important;*/
+}
+.column{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  #border:2px solid red !important;
 }
 </style>
 <script>

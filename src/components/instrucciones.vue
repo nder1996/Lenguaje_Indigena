@@ -1,47 +1,45 @@
-<!--
 <template>
-  <v-card class="mx-auto mt-5" max-width="500">
-    <v-toolbar color="teal" dark>
-      <v-btn icon>
-        <v-icon>mdi-robot-happy-outline</v-icon>
-      </v-btn>
-
-      <v-toolbar-title>Khipar - App</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-    </v-toolbar>
-
-    <v-list>
-      <v-list-group
-        v-for="item in items"
-        :key="item.title"
-        v-model="item.active"
-        :prepend-icon="item.action"
-        no-action
-      >
-        <template v-slot:activator>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title"></v-list-item-title>
-          </v-list-item-content>
-        </template>
-
-        <v-list-item
-          class="content"
-          v-for="child in item.items"
-          :key="child.title"
-          align="start"
-          justify="start"
+  <v-container class="mt-10">
+    <v-row justify="center">
+      <v-card class="card_instrucciones">
+        <v-img
+          height="130px"
+          src="https://hacemosmemoria.org/wp-content/uploads/2020/03/Indigenas-02-998x680.jpg"
         >
-          <v-list-item-content class="mx-auto">
-            <v-list-item-title
-              class="text-wrap text-justify"
-              v-text="child.title"
-            ></v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list-group>
-    </v-list>
-  </v-card>
+          <v-card-title class="white--text mt-8">
+            <v-avatar size="56" contain>
+              <img
+                contain
+                alt="user"
+                src="https://img.freepik.com/vector-premium/muneca-maria-tradicional-mexicana_285069-271.jpg"
+              />
+            </v-avatar>
+            <p class="ml-3">WOUNAAN</p>
+          </v-card-title>
+        </v-img>
+
+        <v-card-text>
+          <div class="font-weight-bold ml-8 mb-2">Today</div>
+
+          <v-timeline align-top dense>
+            <v-timeline-item
+              v-for="message in messages"
+              :key="message.time"
+              :color="message.color"
+              small
+            >
+              <div>
+                <div class="font-weight-normal">
+                  <strong>{{ message.from }}</strong> @{{ message.time }}
+                </div>
+                <div class="text-justify mt-3">{{ message.message }}</div>
+              </div>
+            </v-timeline-item>
+          </v-timeline>
+        </v-card-text>
+      </v-card>
+    </v-row>
+  </v-container>
 </template>
 <style scoped>
 .marco_instrucciones {
@@ -53,53 +51,50 @@
   margin: 0 !important;
   padding: 1rem !important;
 }
+
+.card_instrucciones {
+  width: 90vw !important;
+}
 </style>
 <script>
 export default {
   data: () => ({
-    items: [
+    messages: [
       {
-        action: "mdi-ticket",
-        items: [
-          {
-            title: `A expressão Lorem ipsum em design gráfico e
-           editoração é um texto padrão em latim utilizado na produção
-          gráfica para preencher os espaços de texto em publicações para
-           testar e ajustar aspectos visuais antes de utilizar conteúdo real`,
-          },
-        ],
-        title: "¿QUE ES KHIPAR - APP?",
+        from: "¿Que Es Khipar - App?",
+        message: `Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
+                scaevola imperdiet nec ut, sed euismod convenire principes at.
+                Est et nobis iisque percipit, an vim zril disputando
+                voluptatibus.`,
+        time: "9:47am",
+        color: "yellow accent-4",
       },
       {
-        action: "mdi-silverware-fork-knife",
-        active: true,
-        items: [{ title: "Breakfast & brunch" }],
-        title: "Dining",
+        from: "¿Como Usar La App?",
+        message: `Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
+                scaevola imperdiet nec ut, sed euismod convenire principes at.
+                Est et nobis iisque percipit, an vim zril disputando
+                voluptatibus.`,
+        time: "10:42am",
+        color: "red darken-1",
       },
       {
-        action: "mdi-school",
-        items: [{ title: "List Item" }],
-        title: "Education",
+        from: "¿Cual Es El Objetivo De La App?",
+        message: `Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
+                scaevola imperdiet nec ut, sed euismod convenire principes at.
+                Est et nobis iisque percipit, an vim zril disputando
+                voluptatibus.`,
+        time: "10:37am",
+        color: "green darken-1",
       },
       {
-        action: "mdi-human-male-female-child",
-        items: [{ title: "List Item" }],
-        title: "Family",
-      },
-      {
-        action: "mdi-bottle-tonic-plus",
-        items: [{ title: "List Item" }],
-        title: "Health",
-      },
-      {
-        action: "mdi-briefcase",
-        items: [{ title: "List Item" }],
-        title: "Office",
-      },
-      {
-        action: "mdi-tag",
-        items: [{ title: "List Item" }],
-        title: "Promotions",
+        from: "La Cultura Wounaan",
+        message: `Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
+                scaevola imperdiet nec ut, sed euismod convenire principes at.
+                Est et nobis iisque percipit, an vim zril disputando
+                voluptatibus.`,
+        time: "9:47am",
+        color: "purple darken-4",
       },
     ],
   }),
