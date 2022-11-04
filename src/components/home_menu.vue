@@ -3,7 +3,7 @@
     <v-container class="mt-5" fluid>
       <v-row align="center" justify="center">
         <v-col class="column"  cols="8" sm="3" md="3">
-          <v-card class="mx-auto card_categoria prueba terminada">
+          <v-card class="mx-auto card_categoria prueba terminada 123">
             <v-img
               height="150"
               src="https://i.pinimg.com/originals/4b/32/e2/4b32e29bce01a40249c817bd93706246.jpg"
