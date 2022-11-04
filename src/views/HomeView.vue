@@ -44,14 +44,10 @@
           </v-card>
         </v-tab-item>
         <v-tab-item class="experiencia" :transition="false"">
-          <v-card>
-            <h1>ola mundo</h1>
-          </v-card>
-          <!--     <mensaje_encuesta />
-          <v-card color="grey lighten-3">
-             <formulario_experiencia />
-          </v-card>-->
-     
+    
+           <mensaje_encuesta />
+           <formulario_experiencia />
+
         </v-tab-item>
       </v-tabs-items>
     </v-card>
@@ -62,14 +58,14 @@
   margin-top:1rem ;
   height:85vh !important;
   padding:0rem !important;
-  #border:2px solid red !important;
   background-color:transparent !important;
 }
 .experiencia{
-  /*width:100vw;
-  overflow:hidden !important;
-  padding:0 !important;
-  border:2px solid red !Important;*/
+  display:flex;
+  justify-content: center;
+  align-items: center;
+   overflow:hidden !important;
+  height:100% !important;
 }
 </style>
 <script>
