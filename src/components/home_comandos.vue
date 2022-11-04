@@ -8,7 +8,7 @@
         transition="dialog-bottom-transition"
       >
         <template v-slot:activator="{ on, attrs }">
-          <v-btn color="primary" dark v-bind="attrs" v-on="on"> Comandos </v-btn>
+          <v-btn color="blue-grey darken-1" dark v-bind="attrs" v-on="on"> Comandos </v-btn>
         </template>
         <v-card>
           <v-toolbar dark color="primary">

@@ -8,7 +8,7 @@
         transition="dialog-bottom-transition"
       >
         <template v-slot:activator="{ on, attrs }">
-          <v-btn color="primary" dark v-bind="attrs" v-on="on">
+          <v-btn color="blue-grey darken-1" dark v-bind="attrs" v-on="on">
             Vocales
           </v-btn>
         </template>

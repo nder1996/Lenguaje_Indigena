@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar color="brown darken-1" class="navbar" app fluid>
+    <v-app-bar color="brown darken-1" class="navbar mb-2" app fluid>
       <v-app-bar elevation="0"
         color="brown darken-1"
         dense
@@ -15,6 +15,7 @@
         <v-spacer></v-spacer>
       </v-app-bar>
     </v-app-bar>
+    <br/>
     <v-footer app fluid style="padding: 0 !important;" elevation="3">
       <router-view />
     </v-footer>
