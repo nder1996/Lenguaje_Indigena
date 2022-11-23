@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import { Plugins } from "@capacitor/core";
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
@@ -24,6 +25,11 @@ const routes = [
     path: '/comentarios',
     name: 'comentarios',
     component: () => import( '../views/admin/Comentarios.vue')
+  },
+     {
+    path: '/login',
+    name: 'login',
+    component: () => import( '../views/admin/Login.vue')
   }
 ]
 

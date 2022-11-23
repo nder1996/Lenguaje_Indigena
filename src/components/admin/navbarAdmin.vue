@@ -32,9 +32,9 @@
                 <v-list-item-group active-class="white--text navbarActive text--accent-4">
                     <v-list-item class='item_list' style='color:white !important' to="/crud">
                         <v-list-item-icon class='ico_list' style='color:white !important'>
-                            <v-icon class='ico_list' style='color:white !important'>mdi-table-edit</v-icon>
+                            <v-icon class='ico_list' style='color:white !important'>mdi-card-account-details-outline</v-icon>
                         </v-list-item-icon>
-                        <v-list-item-title>Añadir Multimedia</v-list-item-title>
+                        <v-list-item-title>Datos de los usuarios</v-list-item-title>
                     </v-list-item>
                     <br>
                     <v-list-item class='item_list' to="/estadistica">

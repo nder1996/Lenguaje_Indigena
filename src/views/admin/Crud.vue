@@ -3,29 +3,43 @@
         <navbar />
         <v-container class="container_principal">
             <v-row>
-                <v-col class="column_opciones d-flex justify-center" cols="4">
-                    <section @click.stop="dialog = true">
-                        1
-                        <!--
-                        <modaldichos />
-                    -->
-                    </section>
-                </v-col>
-                <v-col class="column_opciones d-flex justify-center" cols="4">
-                    <section>
-2
-                        <!--
-                      <modaloraciones />
-                  -->
-                    </section>
-                </v-col>
-                <v-col class="column_opciones d-flex justify-center" cols="4">
-                    <section>
-                        3
-                        <!--
-                    <modalvocales />
-                -->
-                    </section>
+                <v-col cols="12">
+                    <v-simple-table class='crud_opiniones table table-striped table-bordered' fixed-header height="300px">
+                        <template v-slot:default>
+                            <thead>
+                                <tr>
+                                    <th class="text-left">
+                                        NOMBRE
+                                    </th>
+                                    <th class="text-left">
+                                        ¿ES INDIGENA?
+                                    </th>
+                                    <th class="text-left">
+                                        ¿CUAL TRIBU PERTENECE?
+                                    </th>
+                                    <th class="text-left">
+                                        ¿TE GUSTO LA APLICACION?
+                                    </th>
+                                    <th class="text-left">
+                                        ¿CALIFICACION QUE LE DIO A LA APP?
+                                    </th>
+                                    <th class="text-left">
+                                        ¿COMENTARIOS?
+                                    </th>
+                                    <th class="text-left">
+                                        ACCIONES
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="item in User" :key="item.name">
+                                    <td>{{ item.nombre }}</td>
+                                    <td>{{ item.indigenaEs }}</td>
+                                    <td>{{ item.indigenaPer }}</td>
+                                </tr>
+                            </tbody>
+                        </template>
+                    </v-simple-table>
                 </v-col>
             </v-row>
         </v-container>
@@ -39,6 +53,7 @@
     align-content: center;
     /*border: 2px solid red !important;*/
 }
+
 
 .column_opciones {
     /*border: 2px solid blue !important;*/
@@ -59,25 +74,50 @@
     align-items: center;
     /*border: 2px solid black ! important;*/
 }
+
+.crud_opiniones {
+    border: 1px solid grey !Important;
+}
+
+.crud_opiniones thead,
+.crud_opiniones thead td {
+    border: 1px solid grey !important;
+}
 </style>
 <script>
 import { mapActions } from 'vuex'
-
+import { fireApp } from '/src/dbfirebase.js';
+import firebase from "firebase/app";
+import 'firebase/database';
 
 export default {
     components: {
-       /* navbar: () => import("../components/admin/navbarAdmin.vue"),
-        modaldichos: () => import("../components/admin/modalDichos.vue"),
-        modaloraciones: () => import("../components/admin/modalOraciones.vue"),
-        modalvocales: () => import("../components/admin/modalVocales.vue")*/
+        navbar: () => import("/src/components/admin/navbarAdmin.vue"),
+        modaldichos: () => import("/src/components/admin/modalDichos.vue"),
+        modaloraciones: () => import("/src/components/admin/modalOraciones.vue"),
+        modalvocales: () => import("/src/components/admin/modalVocales.vue")
     },
     data() {
         return {
             /*dialog: false*/
+            User: []
         }
+    },
+    methods: {
+        readUser: function() {
+            const dbencuesta = firebase.database().ref();
+            const Estudiante = dbencuesta.child('DATOS_ENCUESTA');
+            Estudiante.on("child_added", snap => {
+                let encuesta = snap.val();
+                this.User.push(encuesta);
+            })
+        }
+    },
+    mounted() {
+        // invocar los métodos
+        this.readUser();
     }
 
-    
 
 }
 </script>

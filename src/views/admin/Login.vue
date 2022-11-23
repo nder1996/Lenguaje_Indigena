@@ -8,8 +8,8 @@
                     </div><br>
                     <div class='mt-5'>
                         <br>
-                        <v-text-field label="Email o usuario" prepend-inner-icon="mdi-email" outlined dark></v-text-field>
-                        <v-text-field type="password" label="contraseña" prepend-inner-icon="mdi-lock" outlined dark></v-text-field>
+                        <v-text-field label="Email o usuario" prepend-inner-icon="mdi-email" outlined dark v-model='User'></v-text-field>
+                        <v-text-field type="password" label="contraseña" prepend-inner-icon="mdi-lock" outlined dark v-model='Pasword'></v-text-field>
                         <br>
                         <v-btn to="/crud" class='mt-5' elevation="2" rounded x-large style=' background-color: rgb(205, 151, 84,0.9) !important;' type="submit" dark>Ingresar</v-btn>
                     </div>
@@ -28,6 +28,9 @@
 </template>
 <style scoped>
 .home {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100vh;
     background-color: rgb(225, 213, 201, 0.5) !important;
 }
 
@@ -119,10 +122,13 @@ form div {
 //import HelloWorld from '../components/HelloWorld'
 
 export default {
-    name: 'Login',
+    name: 'login',
+    data(){
+        return{
+            User: 'Ana_@dmin2022',
+            Pasword: '123456'
+        }
+    }
 
-    components: {
-      
-    },
 }
 </script>
