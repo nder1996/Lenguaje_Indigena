@@ -2,7 +2,7 @@
     <div>
         <br />
         <v-form class="mt-10" style="padding:1rem" @submit.prevent="Verificar">
-            <v-text-field required :rules="emailRules" placeholder="Email" v-model="email" outlined></v-text-field>
+            <v-text-field required :rules="nombreRules" placeholder="Ingrese su usuario" v-model="user" outlined></v-text-field>
             <v-text-field v-model="contraseña" placeholder="Ingrese una contraseña" :rules="contraseñaRules" outlined required></v-text-field>
             <v-btn type="submit" block>
                 Ingresar cuenta
@@ -17,7 +17,7 @@ import 'firebase/database';
 export default {
     data() {
         return {
-            email: '',
+            user: '',
             contraseña: '',
             nombreRules: [
                 v => !!v || 'Por favor ingrese su nombre',
@@ -36,12 +36,10 @@ export default {
         Verificar: function() {
             /* const verificar = firebase.database().ref('DATOS_ENCUESTA/').equalTo(this.email);
              console.log("verificar : " + verificar);*/
-           firebase.database().ref("DATOS_ENCUESTA/").on(this.email, function(childSnapshot) {
-
-    console.log(childSnapshot.key,childSnapshot.val());
-
-})
-
+            var ratingRef = firebase.database().ref("DATOS_ENCUESTA/");
+            ratingRef.orderByChild("user").equalTo(this.user).on("child_added", function(data) {
+                console.log("Equal to filter: " + data.val().user);
+            });
         }
     }
 }

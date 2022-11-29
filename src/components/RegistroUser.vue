@@ -3,7 +3,7 @@
         <v-form @submit.prevent="addUser" align="center" justify="center" class='d-flex justify-center align-items-center' style="border:none" elevation="0">
             <v-card style="height:85vh;padding:1rem !important;width:80vw" outlined shaped align="center" justify="center">
                 <h1 class='text-center mb-5 mt-5'>Bienvenido Khipar-App</h1>
-                <v-text-field v-model="newEncuesta.nombre" placeholder="Nombre" outlined required :rules="nombreRules"></v-text-field>
+                <v-text-field v-model="newEncuesta.user" placeholder="User" outlined required :rules="nombreRules"></v-text-field>
                 <v-text-field required :rules="emailRules" placeholder="Email" v-model="newEncuesta.email" outlined></v-text-field>
                 <v-container fluid align="center" justify="center">
                     <h5>¿Pertenes a una tribu indigena?</h5>
@@ -36,13 +36,11 @@ export default {
         return {
             contraseña2: '',
             newEncuesta: {
-                nombre: '',
+                user: '',
                 email: '',
                 contraseña: '',
                 indigenaEs: '',
                 indigenaPer: '',
-                comentario: '',
-                puntaje: '',
             },
             nombreRules: [
                 v => !!v || 'Por favor ingrese su nombre',
@@ -60,14 +58,14 @@ export default {
     methods: {
         addUser: function() {
             console.log('nuevo usuario' + this.newEncuesta)
-            firebase.database().ref('DATOS_ENCUESTA/' + this.newEncuesta.email).set({
-                nombre: this.newEncuesta.nombre,
+            firebase.database().ref('DATOS_ENCUESTA/' + this.newEncuesta.user).set({
+                user: this.newEncuesta.user,
                 email: this.newEncuesta.email,
                 contraseña: this.newEncuesta.contraseña,
                 indigenaEs: this.newEncuesta.indigenaEs,
                 indigenaPer: this.newEncuesta.indigenaPer,
             });
-            this.newEncuesta.nombre = '';
+            this.newEncuesta.user = '';
             this.newEncuesta.email = '';
             this.newEncuesta.contraseña = '';
             this.newEncuesta.indigenaEs = '';
