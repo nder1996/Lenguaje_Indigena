@@ -9,7 +9,7 @@
                             <thead>
                                 <tr>
                                     <th class="text-left">
-                                        NOMBRE
+                                        Usuario
                                     </th>
                                     <th class="text-left">
                                         ¿ES INDIGENA?
@@ -33,9 +33,12 @@
                             </thead>
                             <tbody>
                                 <tr v-for="item in User" :key="item.name">
-                                    <td>{{ item.nombre }}</td>
-                                    <td>{{ item.indigenaEs }}</td>
+                                    <td>{{ item.user }}</td>
+                                    <td>{{ item.indigenaEs}}</td>
                                     <td>{{ item.indigenaPer }}</td>
+                                    <td>{{ item.gustoSiNo }}</td>
+                                    <td>{{ item.gustoSiNo }}</td>
+                                    <td>{{ item.gustoSiNo }}</td>
                                 </tr>
                             </tbody>
                         </template>
@@ -79,10 +82,14 @@
     border: 1px solid grey !Important;
 }
 
-.crud_opiniones thead,
+.crud_opiniones thead th ,.crud_opiniones tbody th {
+    border:2px solid grey !Important;
+}
+
+/*.crud_opiniones thead,
 .crud_opiniones thead td {
     border: 1px solid grey !important;
-}
+}*/
 </style>
 <script>
 import { mapActions } from 'vuex'

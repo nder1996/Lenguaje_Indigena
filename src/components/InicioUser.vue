@@ -38,7 +38,8 @@ export default {
              console.log("verificar : " + verificar);*/
             var ratingRef = firebase.database().ref("DATOS_ENCUESTA/");
             ratingRef.orderByChild("user").equalTo(this.user).on("child_added", function(data) {
-                console.log("Equal to filter: " + data.val().user);
+                console.log("Equal to USER: " + data.val().user);
+                console.log("Equal to CONTRASEÑA: " + data.val().contraseña);
             });
         }
     }
