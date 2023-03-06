@@ -1,6 +1,5 @@
-import { initializeApp } from "firebase/app";
-import firebase from "firebase/app";
-import "firebase/database";
+import firebase from 'firebase/app'
+import 'firebase/database'
 
 
 // TODO: Add SDKs for Firebase products that you want to use

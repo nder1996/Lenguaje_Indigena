@@ -1,5 +1,5 @@
 <template>
-    <div style='border:5px solid red !Important;padding: 0 !Important;' >
+    <div id='app' style='border:5px solid red !Important;padding: 0 !Important;' >
         <v-app>
             <v-app-bar color="brown darken-1" class="navbar mb-2" app fluid>
                 <v-app-bar elevation="0" color="brown darken-1" dense dark style="padding: 0 !important" fluid>

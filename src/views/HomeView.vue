@@ -1,6 +1,6 @@
 <template>
-    <div style='height:100vh;display:flex;justify-content:center;align-content:center;align-items:center;background-color: rgb(225, 213, 201, 0.5)  !important;'>
-        <v-card color='#6D4C41' outlined shaped fluid width='85%' height='62vh' style='padding:0.7rem;' elevation='3' dark>
+    <div id='app' style='height:100vh;display:flex;justify-content:center;align-content:center;align-items:center;background-color: rgb(225, 213, 201, 0.5)  !important;'>
+        <v-card color='#6D4C41' outlined shaped fluid width='85%' style='padding:0.7rem;' elevation='3' dark>
             <v-card-title class='d-flex justify-center align-items-center'>
                 <h1>BIENVENIDOS</h1>
             </v-card-title>
@@ -20,6 +20,16 @@
                 </v-form>
             </v-card-text>
         </v-card>
+        <v-dialog v-model="dialog" max-width="290">
+            <v-card>
+                <v-card-title class="text-h5">
+                    Use Google's location service?
+                </v-card-title>
+                <v-card-text>
+                    Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+                </v-card-text>
+            </v-card>
+        </v-dialog>
     </div>
 </template>
 <script>
@@ -42,6 +52,7 @@ export default {
             showModal: false,
             user: '',
             contraseña: '',
+            dialog: false,
             nombreRules: [
                 v => !!v || 'Por favor ingrese su nombre',
                 v => v.length <= 55 || 'Ingrese un nombre correcto',
@@ -67,48 +78,37 @@ export default {
                             var user = childSnapshot.val();
                             if (user.contraseña == passwordBD) {
                                 existe = true;
-                                console.log('se encuentra en la base de datos')
-                                Swal.fire({
-                                    icon: 'success',
-                                    title: 'Bienvenido a la aplicacion',
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                })
-                                  this.$router.push({ name: 'aplicacion' });
+                                console.log('se encuentra en la base de datos');
+                                router.push('/aplicacion')
                             }
 
 
                         });
                     } else {
-                        existe = true;
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: 'Usuario no encontrado',
-                        })
+                        alert('por favor ingrese los datos correspondientes');
                     }
                 });
-                if (existe == false) {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Contraseña incorrecta',
-                    })
-                }
-            } else {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Por favor ingrese los datos correspondientes',
-                })
+
             }
-
         }
-
-
+    }
+}
+</script>
+<style scoped>
+@media (max-width: 1024px) {
+    #app {
+        overflow-y: hidden !important;
+        height: 100vh !important;
     }
 }
 
-</script>
-<style scoped>
+@media (min-width: 1025px) {
+    #app {
+        display: none !important;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none !important;
+}
 </style>

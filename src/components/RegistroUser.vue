@@ -1,7 +1,7 @@
 <template>
-    <div style='height:100vh;display:flex;justify-content:center;align-content:center;align-items:center;background-color: rgb(225, 213, 201, 0.9) !important;'>
+    <div style='display:flex;justify-content:center;align-content:center;align-items:center;background-color: rgb(225, 213, 201, 0.9) !important;'>
         <v-form @submit.prevent="addUser" align="center" justify="center" class='d-flex justify-center align-items-center' style="border:none" elevation="0">
-            <v-card color='#6D4C41' style="height:97vh;padding:1.8rem !important;width:80%;" outlined shaped align="center" justify="center" dark>
+            <v-card color='#6D4C41' style="padding:1.8rem !important;width:80%;" outlined shaped align="center" justify="center" dark>
                 <v-row>
                     <v-col cols='1' style='display:flex;justify-content:center;align-items:center;align-content:center;padding:0 !important' align='left'>
                         <v-btn class="mx-2" fab dark small color="brown lighten-1" to='/'>
