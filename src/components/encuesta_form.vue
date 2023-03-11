@@ -3,6 +3,7 @@
         <v-form class="formulario" v-model="valid" dark v-on:submit.prevent="addOpinion">
             <v-card outlined shaped style='padding:2rem'>
                 <v-row>
+                    <p>{{myMessage}}</p>
                     <v-col class="column" cols="12">
                         <div style='display:flex;justify-content:center;align-items:center;flex-direction: column;'>
                             <h4>¿Te gusto la aplicacion?</h4>
@@ -33,6 +34,7 @@
                         </v-btn>
                     </v-col>
                 </v-row>
+                   <p style='border:1px solid red;padding:1rem !important'>{{ miVariable }}</p>
             </v-card>
         </v-form>
     </div>
@@ -63,29 +65,46 @@
 import { fireApp } from '/src/dbfirebase.js';
 import firebase from "firebase/app";
 import 'firebase/database';
+//import user from '/src/views/HomeView.vue'
+
+//import ChildComponent from './ChildComponent.vue'
+
 export default {
     data() {
         return {
             gustoSiNo: '',
             rating: '',
             comentarios: ''
+        }
 
-        }
     },
-    methods: {
-        addOpinion: function() {
-            console.log("es INDIGENA : " + this.gustoSiNo)
-            console.log("es RATING : " + this.rating)
-            console.log("es COMENTARIOS : " + this.comentarios)
-            const db = firebase.database();
-            const recordRef = db.ref("DATOS_ENCUESTA/Marcela");
-            recordRef.update({
-                gustoSiNo: this.gustoSiNo,
-                puntaje: this.rating,
-                comentarios: this.comentarios
-            });
+    watch: {
+        message: function() {
+            this.$emit('message', this.message)
         }
-    },
-    
-}
+        },
+        methods: {
+            addOpinion: function() {
+                console.log("es INDIGENA : " + this.gustoSiNo)
+                console.log("es RATING : " + this.rating)
+                console.log("es COMENTARIOS : " + this.comentarios)
+                const db = firebase.database();
+                const recordRef = db.ref("DATOS_ENCUESTA/Marcela");
+                recordRef.update({
+                    gustoSiNo: this.gustoSiNo,
+                    puntaje: this.rating,
+                    comentarios: this.comentarios
+                });
+            }
+        },
+        mounted() {
+            alert('user : ' + this.user)
+            // invocar los métodos
+            //this.readUser();
+        },
+        props: {
+             miVariable: String
+        }
+
+    }
 </script>

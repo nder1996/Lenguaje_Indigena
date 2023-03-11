@@ -18,6 +18,7 @@
                         Registrarme
                     </v-btn>
                 </v-form>
+                <mi-componente miVariable="Hola, mundo!" />
             </v-card-text>
         </v-card>
         <v-dialog v-model="dialog" max-width="290">
@@ -41,15 +42,19 @@ import 'firebase/database';
 import Swal from 'sweetalert2';
 import router from "@/router";
 
+import MiComponente  from '/src/components/encuesta_form.vue'
+
 
 export default {
     components: {
         inicio,
         registro,
+        MiComponente ,
     },
     data() {
         return {
             showModal: false,
+            myMessage: 'Hola desde el componente padre!',
             user: '',
             contraseña: '',
             dialog: false,
@@ -90,8 +95,12 @@ export default {
                 });
 
             }
+        },
+        handleMessage(value) {
+            this.myMessage = value
         }
     }
+
 }
 </script>
 <style scoped>
