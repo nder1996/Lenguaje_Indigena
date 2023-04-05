@@ -8,7 +8,17 @@ import VueRouter from 'vue-router'
 import { Bar } from 'vue-chartjs'
 
 
-Vue.config.productionTip = false
+
+
+
+
+
+Vue.config.productionTip = false;
+
+
+Vue.prototype.$miVariableGlobal = null;
+
+
 
 Vue.use(VueSweetalert2);
 Vue.use(VueRouter)

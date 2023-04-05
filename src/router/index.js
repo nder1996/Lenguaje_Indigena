@@ -2,10 +2,18 @@ import Vue from 'vue'
 import { Plugins } from "@capacitor/core";
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import EncuestaForm from '../components/encuesta_form.vue';
 
 Vue.use(VueRouter)
 
 const routes = [{
+        path: '/EncuestaForm/:username',
+        name: 'encuestaForm',
+        component: EncuestaForm,
+        props: true
+    },
+
+    {
         path: '/',
         name: 'home',
         component: HomeView
@@ -35,7 +43,7 @@ const routes = [{
         name: 'registroUser',
         component: () => import('../components/RegistroUser.vue')
     },
-        {
+    {
         path: '/aplicacion',
         name: 'aplicacion',
         component: () => import('../views/Aplicacion.vue')

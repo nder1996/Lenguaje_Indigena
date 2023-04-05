@@ -27,7 +27,7 @@
                 </v-list-item-content>
             </v-list-item>
             <v-divider></v-divider>
-           <br>
+            <br>
             <v-list nav dense>
                 <v-list-item-group active-class="white--text navbarActive text--accent-4">
                     <v-list-item class='item_list' style='color:white !important' to="/crud">
@@ -56,7 +56,20 @@
     </v-container>
 </template>
 <script>
+import router from "@/router";
+export default {
+    data() {
+        return {
 
+        }
+    },
+    methods: {
+        cerrarSesion: function() {
+            router.push('/login');
+        }
+    }
+
+}
 </script>
 <style>
 .navegation {

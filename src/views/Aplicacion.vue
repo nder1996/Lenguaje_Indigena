@@ -1,5 +1,5 @@
 <template>
-    <div id='app' style='border:5px solid red !Important;padding: 0 !Important;' >
+    <div id='app' style='border:5px solid red !Important;padding: 0 !Important;'>
         <v-app>
             <v-app-bar color="brown darken-1" class="navbar mb-2" app fluid>
                 <v-app-bar elevation="0" color="brown darken-1" dense dark style="padding: 0 !important" fluid>
@@ -8,6 +8,11 @@
                     </v-app-bar-nav-icon>
                     <v-toolbar-title>Khipar - App</v-toolbar-title>
                     <v-spacer></v-spacer>
+                    <v-btn text @click="cerrarSesionApp">
+                        <span>Cerrar sesion</span>
+                        &nbsp;&nbsp;
+                        <v-icon>mdi-login-variant </v-icon>
+                    </v-btn>
                 </v-app-bar>
             </v-app-bar>
             <v-footer style='padding: 0 !Important;' app>
@@ -29,14 +34,12 @@
                         <v-tab-item :transition="false" style="overflow:auto !important">
                             <home_menu />
                         </v-tab-item>
-                        <v-tab-item class="experiencia" :transition="false"">
-    
-           <mensaje_encuesta />
-           <formulario_experiencia />
-
-        </v-tab-item>
-      </v-tabs-items>
-    </v-card>
+                        <v-tab-item class="experiencia" :transition="false">
+                            <mensaje_encuesta />
+                            <formulario_experiencia />
+                        </v-tab-item>
+                    </v-tabs-items>
+                </v-card>
             </v-footer>
         </v-app>
     </div>
@@ -57,41 +60,50 @@
     height: 100% !important;
 }
 
-.v-footer{
-  padding: 0;
-  margin-top: 1rem !Important;
+.v-footer {
+    padding: 0;
+    margin-top: 1rem !Important;
 }
 
-    @media (max-width: 1024px) {
-        #app {
-          overflow-y: hidden !important;
-          height: 100vh !important;
-        }
-      }
-      @media (min-width: 1025px) {
-        #app {
-          display: none !important;
-        }
-      }
-      ::-webkit-scrollbar {
-          display: none !important;
-        }
+@media (max-width: 1024px) {
+    #app {
+        overflow-y: hidden !important;
+        height: 100vh !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    #app {
+        display: none !important;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none !important;
+}
 </style>
 <script>
 export default {
     components: {
-      mensaje_bienvenida: ()=> import("../components/bienvenida.vue"),
-        instrucciones_bienvenida: ()=> import("../components/instrucciones.vue"),
-                            formulario_experiencia: () => import("../components/encuesta_form.vue"),
-                            mensaje_encuesta: () => import("../components/mensaje_encuesta.vue"),
-                            home_menu: () => import("../components/home_menu.vue"),
-                            },
-                            data() {
-                            return {
-                            tabs: null,
-                            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            btn_home: ["mdi-hand-wave", "mdi-home", "mdi-book-information-variant"]
-                            };
-                            },
-                            };
-                            </script>
+
+        instrucciones_bienvenida: () => import("../components/instrucciones.vue"),
+        formulario_experiencia: () => import("../components/encuesta_form.vue"),
+        mensaje_encuesta: () => import("../components/mensaje_encuesta.vue"),
+        home_menu: () => import("../components/home_menu.vue"),
+        mensaje_bienvenida: () => import("../components/bienvenida.vue")
+    },
+    data() {
+        return {
+            tabs: null,
+            btn_home: ["mdi-hand-wave", "mdi-home", "mdi-book-information-variant"]
+        };
+    },
+    methods: {
+        cerrarSesionApp: function() {
+            //router.push('/login');
+            this.$root.$miVariableGlobal='';
+            router.push('/');
+        }
+    }
+};
+</script>

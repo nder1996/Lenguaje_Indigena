@@ -1,5 +1,5 @@
 <template>
-  <v-container class="mt-10">
+  <v-container class="mt-10" style='height:84vh !important'>
     <v-row justify="center">
       <v-card class="card_instrucciones">
         <v-img

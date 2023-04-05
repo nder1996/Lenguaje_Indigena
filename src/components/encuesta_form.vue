@@ -1,22 +1,21 @@
 <template>
-    <div class="card_encuesta">
-        <v-form class="formulario" v-model="valid" dark v-on:submit.prevent="addOpinion">
+    <div class="card_encuesta" style='height:84vh'>
+        <v-form class="formulario" dark v-on:submit.prevent="addOpinion">
             <v-card outlined shaped style='padding:2rem'>
                 <v-row>
-                    <p>{{myMessage}}</p>
                     <v-col class="column" cols="12">
                         <div style='display:flex;justify-content:center;align-items:center;flex-direction: column;'>
-                            <h4>¿Te gusto la aplicacion?</h4>
-                            <v-chip-group active-class="green white--text mt-5">
-                                <v-chip class="ma-2 justify-center" color="success" v-model="gustoSiNo" outlined value="Si">
+                            <h4 class='mb-5'>¿Te gusto la aplicacion?</h4>
+                            <div class='display:flex;justify-content:center;align-items:center;flex-direction: row;'>
+                                <v-chip class="ma-2 justify-center" color="success" outlined @click="gustoSiNo = 'SI'">
                                     <v-icon left> mdi-emoticon-happy-outline</v-icon>
                                     Si
                                 </v-chip>
-                                <v-chip class="ma-2 justify-center" v-model="gustoSiNo" color="deep-orange" outlined value="No">
+                                <v-chip class="ma-2 justify-center" color="deep-orange" outlined @click="gustoSiNo = 'NO'">
                                     <v-icon left> mdi-emoticon-angry </v-icon>
                                     No
                                 </v-chip>
-                            </v-chip-group>
+                            </div>
                         </div>
                     </v-col>
                     <v-col class="column" cols="12">
@@ -34,7 +33,6 @@
                         </v-btn>
                     </v-col>
                 </v-row>
-                   <p style='border:1px solid red;padding:1rem !important'>{{ miVariable }}</p>
             </v-card>
         </v-form>
     </div>
@@ -70,41 +68,31 @@ import 'firebase/database';
 //import ChildComponent from './ChildComponent.vue'
 
 export default {
+    name: 'encuestaForm',
+    props: ['username'],
     data() {
         return {
             gustoSiNo: '',
             rating: '',
-            comentarios: ''
+            comentarios: '',
+            Username: '',
         }
 
     },
-    watch: {
-        message: function() {
-            this.$emit('message', this.message)
+    methods: {
+        addOpinion: function() {
+            console.log("es INDIGENA : " + this.gustoSiNo)
+            console.log("es RATING : " + this.rating)
+            console.log("es COMENTARIOS : " + this.comentarios)
+            console.log("es Username : " + this.username)
+            const db = firebase.database();
+            const recordRef = db.ref(`DATOS_ENCUESTA/${this.$root.$miVariableGlobal}`);
+            recordRef.update({
+                gustoSiNo: this.gustoSiNo,
+                puntaje: this.rating,
+                comentarios: this.comentarios
+            });
         }
-        },
-        methods: {
-            addOpinion: function() {
-                console.log("es INDIGENA : " + this.gustoSiNo)
-                console.log("es RATING : " + this.rating)
-                console.log("es COMENTARIOS : " + this.comentarios)
-                const db = firebase.database();
-                const recordRef = db.ref("DATOS_ENCUESTA/Marcela");
-                recordRef.update({
-                    gustoSiNo: this.gustoSiNo,
-                    puntaje: this.rating,
-                    comentarios: this.comentarios
-                });
-            }
-        },
-        mounted() {
-            alert('user : ' + this.user)
-            // invocar los métodos
-            //this.readUser();
-        },
-        props: {
-             miVariable: String
-        }
-
     }
+}
 </script>

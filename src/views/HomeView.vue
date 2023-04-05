@@ -18,19 +18,8 @@
                         Registrarme
                     </v-btn>
                 </v-form>
-                <mi-componente miVariable="Hola, mundo!" />
             </v-card-text>
         </v-card>
-        <v-dialog v-model="dialog" max-width="290">
-            <v-card>
-                <v-card-title class="text-h5">
-                    Use Google's location service?
-                </v-card-title>
-                <v-card-text>
-                    Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
-                </v-card-text>
-            </v-card>
-        </v-dialog>
     </div>
 </template>
 <script>
@@ -39,17 +28,13 @@ import registro from '../components/RegistroUser.vue';
 import { fireApp } from '/src/dbfirebase.js';
 import firebase from "firebase/app";
 import 'firebase/database';
-import Swal from 'sweetalert2';
 import router from "@/router";
-
-import MiComponente  from '/src/components/encuesta_form.vue'
 
 
 export default {
     components: {
         inicio,
         registro,
-        MiComponente ,
     },
     data() {
         return {
@@ -58,6 +43,7 @@ export default {
             user: '',
             contraseña: '',
             dialog: false,
+            miVariableGlobal: '',
             nombreRules: [
                 v => !!v || 'Por favor ingrese su nombre',
                 v => v.length <= 55 || 'Ingrese un nombre correcto',
@@ -73,34 +59,31 @@ export default {
     },
     methods: {
         Verificar: function() {
+            const self = this;
             var passwordBD = this.contraseña;
             var usuario = this.user;
             var existe = new Boolean(false);
             if (passwordBD != "" && passwordBD != " " && usuario != "" && usuario != " ") {
+                // Guarda la referencia a `this` en una variable
+                var vm = this;
                 firebase.database().ref("DATOS_ENCUESTA/").orderByChild("user").equalTo(usuario).once("value").then(function(snapshot) {
                     if (snapshot.exists()) {
                         snapshot.forEach(function(childSnapshot) {
                             var user = childSnapshot.val();
                             if (user.contraseña == passwordBD) {
                                 existe = true;
-                                console.log('se encuentra en la base de datos');
-                                router.push('/aplicacion')
+                                // Actualiza la variable global con el usuario
+                                vm.$root.$miVariableGlobal = self.user;
+                                router.push('/aplicacion');
                             }
-
-
                         });
                     } else {
                         alert('por favor ingrese los datos correspondientes');
                     }
                 });
-
             }
         },
-        handleMessage(value) {
-            this.myMessage = value
-        }
-    }
-
+    },
 }
 </script>
 <style scoped>
