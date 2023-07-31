@@ -4,9 +4,8 @@
             <v-row align="center" justify="center">
                 <v-col class="column" cols="8" sm="3" md="3">
                     <v-card class="mx-auto card_categoria prueba terminada">
-                        <v-img height="150" src="https://i.pinimg.com/originals/4b/32/e2/4b32e29bce01a40249c817bd93706246.jpg"></v-img>
+                        <v-img cover height="150" src="@/assets/simbolosPresentacion.jpeg"></v-img>
                         <v-card-title>Simbolos</v-card-title>
-                        <v-card-subtitle style="margin-top: 0.1px">Traduccion al español</v-card-subtitle>
                         <v-card-text class="mt-2" align="center">
                             <v-chip>
                                 <home_simbolos />
@@ -16,9 +15,8 @@
                 </v-col>
                 <v-col class="column" cols="8" sm="3" md="3">
                     <v-card class="mx-auto card_categoria">
-                        <v-img height="150" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvDLD51-S7EO0JcJoQxZxXKyWyBcIhSAtFmZvVZIqj78Gm6Z52mKyj1NCN9Mfy1v4g-A&usqp=CAU"></v-img>
+                        <v-img contain height="150" src="@/assets/vocalesPresentacion.jpeg"></v-img>
                         <v-card-title>Vocales</v-card-title>
-                        <v-card-subtitle style="margin-top: 0.1px">Traduccion al español</v-card-subtitle>
                         <v-card-text class="mt-2" align="center">
                             <v-chip>
                                 <home_vocales />
@@ -28,9 +26,8 @@
                 </v-col>
                 <v-col class="column" cols="8" sm="3" md="3">
                     <v-card class="mx-auto card_categoria">
-                        <v-img height="150" src="https://www.cric-colombia.org/portal/wp-content/uploads/2017/09/colores-indigenas.jpg"></v-img>
+                        <v-img height="150" src="@/assets/coloresPresentacion.jpeg"></v-img>
                         <v-card-title>Colores</v-card-title>
-                        <v-card-subtitle style="margin-top: 0.1px">Traduccion al español</v-card-subtitle>
                         <v-card-text class="mt-2" align="center">
                             <v-chip>
                                 <home_colores />
@@ -40,9 +37,8 @@
                 </v-col>
                 <v-col class="column" cols="8" sm="3" md="3">
                     <v-card class="mx-auto card_categoria">
-                        <v-img height="150" src="https://sobrehistoria.com//wp-content/uploads/2012/09/numeros-arabes-480x159.jpg"></v-img>
+                        <v-img height="150" src="@/assets/numerosPresentacion.jpeg"></v-img>
                         <v-card-title>Numeros</v-card-title>
-                        <v-card-subtitle style="margin-top: 0.1px">Traduccion al español</v-card-subtitle>
                         <v-card-text class="mt-2" align="center">
                             <v-chip>
                                 <home_numeros />
@@ -52,9 +48,8 @@
                 </v-col>
                 <v-col class="column" cols="8" sm="3" md="3">
                     <v-card class="mx-auto card_categoria">
-                        <v-img height="150" src="http://c.files.bbci.co.uk/10073/production/_97215656_naana.jpg"></v-img>
+                        <v-img cover height="150" src="@/assets/comandosPresentacion.jpeg"></v-img>
                         <v-card-title>Comandos</v-card-title>
-                        <v-card-subtitle style="margin-top: 0.1px">Traduccion al español</v-card-subtitle>
                         <v-card-text class="mt-2" align="center">
                             <v-chip>
                                 <home_comandos />
@@ -64,12 +59,44 @@
                 </v-col>
                 <v-col class="column" cols="8" sm="3" md="3">
                     <v-card class="mx-auto card_categoria">
-                        <v-img height="150" src="https://us.123rf.com/450wm/solodkayamari/solodkayamari2104/solodkayamari210400023/169707661-ni%C3%B1os-decorativos-abc-en-estilo-dino-divertido-alfabeto-creativo-aislado-ilustraci%C3%B3n-vectorial.jpg?ver=6"></v-img>
+                        <v-img contain height="150" src="@/assets/abecedarioPresentacion.jpeg"></v-img>
                         <v-card-title>Abecedario</v-card-title>
-                        <v-card-subtitle style="margin-top: 0.1px">Traduccion al español</v-card-subtitle>
                         <v-card-text class="mt-2" align="center">
                             <v-chip>
                                 <home_abecedario />
+                            </v-chip>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+                <v-col class="column" cols="8" sm="3" md="3">
+                    <v-card class="mx-auto card_categoria">
+                        <v-img height="150" src="@/assets/figurasgPresentacion.jpeg"></v-img>
+                        <v-card-title>Figuras Geometricas</v-card-title>
+                        <v-card-text class="mt-2" align="center">
+                            <v-chip>
+                                <home_figurasgeometricas />
+                            </v-chip>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+                <v-col class="column" cols="8" sm="3" md="3">
+                    <v-card class="mx-auto card_categoria">
+                        <v-img height="150" src="@/assets/saludosPresentacion.jpeg"></v-img>
+                        <v-card-title>Saludos</v-card-title>
+                        <v-card-text class="mt-2" align="center">
+                            <v-chip>
+                                <home_saludos />
+                            </v-chip>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+                <v-col class="column" cols="8" sm="3" md="3">
+                    <v-card class="mx-auto card_categoria">
+                        <v-img height="150" src="@/assets/animalesPresentacion.jpeg"></v-img>
+                        <v-card-title>Animales</v-card-title>
+                        <v-card-text class="mt-2" align="center">
+                            <v-chip>
+                                <home_animales />
                             </v-chip>
                         </v-card-text>
                     </v-card>
@@ -105,6 +132,9 @@ export default {
         home_numeros: () => import("../components/home_numeros.vue"),
         home_comandos: () => import("../components/home_comandos.vue"),
         home_abecedario: () => import("../components/home_abecedario.vue"),
+        home_figurasgeometricas: () => import("../components/home_figurasgeometricas.vue"),
+        home_saludos: () => import("../components/home_saludos.vue"),
+        home_animales: () => import("../components/home_animales.vue"),
     },
 };
 </script>

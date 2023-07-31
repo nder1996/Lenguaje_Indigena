@@ -31,7 +31,8 @@
     padding: 0 !important;
     margin: 0 !important;
     height: 100vh;
-    background-color: rgb(225, 213, 201, 0.5) !important;
+    /*background-color: rgb(225, 213, 201, 0.5) !important;*/
+    
 }
 
 .column-form form {

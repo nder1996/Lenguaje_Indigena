@@ -20,12 +20,15 @@
                     </v-toolbar>
                     <v-card-text class="mt-10">
                         <v-row>
-                            <v-col v-for="i in 5" :key="i" cols="12" sm="4" md="4" align="center" jusitfy="center">
-                                <v-card elevation="2" width="300">
-                                    <v-img height="150" src="https://media.istockphoto.com/vectors/capital-letters-in-geometric-indigenous-style-for-hipster-theme-vector-id962818048"></v-img>
-                                    <v-card-title>Abecedario idioma indigena</v-card-title>
-                                    <v-card-subtitle class="text-start">Abecedario idioma español</v-card-subtitle>
-                                    <audio class="mt-3 mb-3" src="https://lenguasdecolombia.caroycuervo.gov.co/ICCadmin/ICC/documentos/audio/poemas%20fredy%20chikangana_0.mp3" controls style="width: 90%"></audio>
+                            <v-col cols="12" align="center" jusitfy="center">
+                                <v-card width="350">
+                                    <v-card-title style='display:flex;flex-direction:column;justify-content:center;align-items:center'>
+                                        <strong class='mb-2'>Abecedario</strong>
+                                        Lenguaje Khipar-App
+                                    </v-card-title>
+                                    <v-card-text>
+                                        <video src="@/assets/abecedario_wuonan.mp4" width="100%" controls></video>
+                                    </v-card-text>
                                 </v-card>
                             </v-col>
                         </v-row>
