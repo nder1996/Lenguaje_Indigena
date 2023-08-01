@@ -19,7 +19,7 @@
                 <div class='text_efect'>
                     <h1 class='text-center'><strong>Khipar-App</strong></h1>
                     <p class='text_gallery text-justify mt-2'>
-                       Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Sed totam cum blanditiis iusto dolores cupiditate vero at repudiandae eaque.
+                       Khipar es una app móvil, que permite  establecer una interacción con la cultura wounaan.
                     </p>
                 </div>
             </v-col>

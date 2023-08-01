@@ -3,7 +3,7 @@
         <v-row justify="center">
             <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
                 <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="blue-grey darken-1" dark v-bind="attrs" v-on="on">
+                    <v-btn style='background-color:rgb(255, 214, 0)' dark v-bind="attrs" v-on="on">
                         Abecedario
                     </v-btn>
                 </template>
@@ -12,11 +12,7 @@
                         <v-btn icon dark @click="dialog = false">
                             <v-icon>mdi-close</v-icon>
                         </v-btn>
-                        <v-toolbar-title>Settings</v-toolbar-title>
                         <v-spacer></v-spacer>
-                        <v-toolbar-items>
-                            <v-btn dark text @click="dialog = false"> Save </v-btn>
-                        </v-toolbar-items>
                     </v-toolbar>
                     <v-card-text class="mt-10">
                         <v-row>

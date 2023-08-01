@@ -8,10 +8,10 @@
       <v-card outlined shaped style="background-color: rgb(205, 151, 84,0.9) !important;" dark>
      
        <v-card-title class="text-h6 text-center">
-           Para nosotros es importante saber tu opinion
+           Para nosotros es importante saber tu opinión
         </v-card-title>    
                  <v-card-text class="text-justify mt-3">
-            <v-img src="https://i.postimg.cc/Ls9B4g4P/pngtree-hand-drawn-cartoon-aboriginal-characters-png-image-2339440-removebg-preview.png" />
+            <v-img src="@/assets/presentacion_img.jpeg" />
           </v-card-text>
       </v-card>
     </v-dialog>

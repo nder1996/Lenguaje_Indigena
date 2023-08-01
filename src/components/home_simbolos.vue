@@ -3,8 +3,8 @@
         <v-row justify="center">
             <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
                 <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="blue-grey darken-1" dark v-bind="attrs" v-on="on">
-                        Simbolos
+                    <v-btn style='background-color:rgb(200, 151, 91)' dark v-bind="attrs" v-on="on">
+                        Símbolos
                     </v-btn>
                 </template>
                 <v-card>
@@ -12,7 +12,7 @@
                         <v-btn icon dark @click="dialog = false">
                             <v-icon>mdi-close</v-icon>
                         </v-btn>
-                        <v-toolbar-title>Simbolos</v-toolbar-title>
+                        <v-toolbar-title>Símbolos</v-toolbar-title>
                         <v-spacer></v-spacer>
                     </v-toolbar>
                     <v-card-text class="mt-10">
@@ -20,7 +20,7 @@
                             <v-col cols="12" align="center" jusitfy="center">
                                 <v-card width="350">
                                     <v-card-title style='display:flex;flex-direction:column;justify-content:center;align-items:center'>
-                                        <strong class='mb-2'>Simbolos</strong>
+                                        <strong class='mb-2'>Símbolos</strong>
                                         Lenguaje Khipar-App
                                     </v-card-title>
                                     <v-card-text>

@@ -3,18 +3,18 @@
         <v-container class="mt-5" fluid>
             <v-row align="center" justify="center">
                 <v-col class="column" cols="8" sm="3" md="3">
-                    <v-card class="mx-auto card_categoria prueba terminada">
+                    <v-card class="mx-auto card_categoria prueba terminada" height='300px'>
                         <v-img cover height="150" src="@/assets/simbolosPresentacion.jpeg"></v-img>
-                        <v-card-title>Simbolos</v-card-title>
+                        <v-card-title>Símbolos</v-card-title>
                         <v-card-text class="mt-2" align="center">
-                            <v-chip>
+                            <v-chip >
                                 <home_simbolos />
                             </v-chip>
                         </v-card-text>
                     </v-card>
                 </v-col>
                 <v-col class="column" cols="8" sm="3" md="3">
-                    <v-card class="mx-auto card_categoria">
+                    <v-card class="mx-auto card_categoria" height='300px'>
                         <v-img contain height="150" src="@/assets/vocalesPresentacion.jpeg"></v-img>
                         <v-card-title>Vocales</v-card-title>
                         <v-card-text class="mt-2" align="center">
@@ -25,7 +25,7 @@
                     </v-card>
                 </v-col>
                 <v-col class="column" cols="8" sm="3" md="3">
-                    <v-card class="mx-auto card_categoria">
+                    <v-card class="mx-auto card_categoria" height='300px'>
                         <v-img height="150" src="@/assets/coloresPresentacion.jpeg"></v-img>
                         <v-card-title>Colores</v-card-title>
                         <v-card-text class="mt-2" align="center">
@@ -36,9 +36,9 @@
                     </v-card>
                 </v-col>
                 <v-col class="column" cols="8" sm="3" md="3">
-                    <v-card class="mx-auto card_categoria">
+                    <v-card class="mx-auto card_categoria" height='300px'>
                         <v-img height="150" src="@/assets/numerosPresentacion.jpeg"></v-img>
-                        <v-card-title>Numeros</v-card-title>
+                        <v-card-title>Números</v-card-title>
                         <v-card-text class="mt-2" align="center">
                             <v-chip>
                                 <home_numeros />
@@ -47,7 +47,7 @@
                     </v-card>
                 </v-col>
                 <v-col class="column" cols="8" sm="3" md="3">
-                    <v-card class="mx-auto card_categoria">
+                    <v-card class="mx-auto card_categoria" height='300px'>
                         <v-img cover height="150" src="@/assets/comandosPresentacion.jpeg"></v-img>
                         <v-card-title>Comandos</v-card-title>
                         <v-card-text class="mt-2" align="center">
@@ -58,7 +58,7 @@
                     </v-card>
                 </v-col>
                 <v-col class="column" cols="8" sm="3" md="3">
-                    <v-card class="mx-auto card_categoria">
+                    <v-card class="mx-auto card_categoria" height='300px'>
                         <v-img contain height="150" src="@/assets/abecedarioPresentacion.jpeg"></v-img>
                         <v-card-title>Abecedario</v-card-title>
                         <v-card-text class="mt-2" align="center">
@@ -69,9 +69,9 @@
                     </v-card>
                 </v-col>
                 <v-col class="column" cols="8" sm="3" md="3">
-                    <v-card class="mx-auto card_categoria">
+                    <v-card class="mx-auto card_categoria" height='300px'>
                         <v-img height="150" src="@/assets/figurasgPresentacion.jpeg"></v-img>
-                        <v-card-title>Figuras Geometricas</v-card-title>
+                        <v-card-title>Figuras Geométricas</v-card-title>
                         <v-card-text class="mt-2" align="center">
                             <v-chip>
                                 <home_figurasgeometricas />
@@ -80,7 +80,7 @@
                     </v-card>
                 </v-col>
                 <v-col class="column" cols="8" sm="3" md="3">
-                    <v-card class="mx-auto card_categoria">
+                    <v-card class="mx-auto card_categoria" height='300px'>
                         <v-img height="150" src="@/assets/saludosPresentacion.jpeg"></v-img>
                         <v-card-title>Saludos</v-card-title>
                         <v-card-text class="mt-2" align="center">
@@ -91,12 +91,23 @@
                     </v-card>
                 </v-col>
                 <v-col class="column" cols="8" sm="3" md="3">
-                    <v-card class="mx-auto card_categoria">
+                    <v-card class="mx-auto card_categoria" height='300px'>
                         <v-img height="150" src="@/assets/animalesPresentacion.jpeg"></v-img>
                         <v-card-title>Animales</v-card-title>
                         <v-card-text class="mt-2" align="center">
                             <v-chip>
                                 <home_animales />
+                            </v-chip>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+                 <v-col class="column" cols="8" sm="3" md="3">
+                    <v-card class="mx-auto card_categoria" height='300px'>
+                        <v-img height="150" src="@/assets/animalesPresentacion.jpeg"></v-img>
+                        <v-card-title>Galería</v-card-title>
+                        <v-card-text class="mt-2" align="center">
+                            <v-chip>
+                                <home_galeria />
                             </v-chip>
                         </v-card-text>
                     </v-card>
@@ -135,6 +146,7 @@ export default {
         home_figurasgeometricas: () => import("../components/home_figurasgeometricas.vue"),
         home_saludos: () => import("../components/home_saludos.vue"),
         home_animales: () => import("../components/home_animales.vue"),
+        home_galeria: () => import("../components/home_galeria.vue"),
     },
 };
 </script>

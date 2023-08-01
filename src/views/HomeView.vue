@@ -1,6 +1,6 @@
 <template>
     <div id='app' style='height:100vh;display:flex;justify-content:center;align-content:center;align-items:center;background-color: rgb(225, 213, 201, 0.5)  !important;'>
-        <v-card color='#6D4C41' outlined shaped fluid width='85%' style='padding:0.7rem;' elevation='3' dark>
+        <v-card color='#6D4C41' outlined shaped fluid width='95%' style='padding:0.7rem;' elevation='3' dark>
             <v-card-title class='d-flex justify-center align-items-center'>
                 <h1>BIENVENIDOS</h1>
             </v-card-title>
@@ -75,6 +75,8 @@ export default {
                                 // Actualiza la variable global con el usuario
                                 vm.$root.$miVariableGlobal = self.user;
                                 router.push('/aplicacion');
+                                localStorage.setItem('UserActual', self.user);
+                                
                             }
                         });
                     } else {

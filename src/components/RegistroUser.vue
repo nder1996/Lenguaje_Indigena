@@ -13,37 +13,42 @@
                             <h3 class='text-center mb-5 mt-5 white--text'>PUEDES REGISTRARTE EN NUESTRA APLICACIÓN</h3>
                         </div>
                         <v-stepper-header>
-                            <v-stepper-step :complete="e1 > 1" step="1" class='white--text'>
+                            <v-stepper-step :complete="e1 > 1" step="1" class='white--text' @click="e1 = 1">
                                 <span class="white--text">
                                     Ingrese tus datos
                                 </span>
                             </v-stepper-step>
                             <v-divider></v-divider>
-                            <v-stepper-step :complete="e1 > 2" step="2" class='white--text'>
+                            <v-stepper-step :complete="e1 > 2" step="2" class='white--text' @click="e2 = 2">
                                 <span class='white--text'>
-                                    Perteneces a una tribu indigena
+                                    Perteneces a una tribu indígena
                                 </span>
                             </v-stepper-step>
                             <v-divider></v-divider>
-                            <v-stepper-step step="3" class='white--text'>
+                            <v-stepper-step step="3" class='white--text' @click="e3 = 3">
                                 <span class='white--text'>
                                     Escribe tu contraseña
                                 </span>
                             </v-stepper-step>
                         </v-stepper-header>
                         <v-stepper-items>
-                            <v-stepper-content step="1">
+
+                            <v-stepper-content step="1"  style='cursor:pointer'>
                                 <v-card class="mb-12" height="200px" style='background-color: rgb(109, 76, 65) !important'>
+                                    <br>
+                                      <h5 class='white--text mb-3'>INGRESE SU USUARIO</h5>
                                     <v-text-field style='width:100%' v-model="newEncuesta.user" placeholder="User" outlined required :rules="nombreRules" dark></v-text-field>
+                                    <!--
                                     <v-text-field style='width:100%' :rules="emailRules" placeholder="Email" v-model="newEncuesta.email" outlined required dark></v-text-field>
+                                -->
                                 </v-card>
                                 <v-btn color="brown lighten-1" @click="e1 = 2" dark>
                                     Continue
                                 </v-btn>
                             </v-stepper-content>
-                            <v-stepper-content step="2">
+                            <v-stepper-content step="2" >
                                 <v-card class="mb-12" height="200px" style='background-color: rgb(109, 76, 65) !important'>
-                                    <h5 class='white--text'>¿Pertenes a una tribu indigena?</h5>
+                                    <h5 class='white--text'>¿PERTENECES A UNA TRIBU INDÍGENA?</h5>
                                     <v-radio-group v-model="newEncuesta.indigenaEs" row required="true" justify='center' align="center">
                                         <div style='width:100vw;display:flex;justify-content:center' dark>
                                             <v-radio label="Si Pertenezco" value="Si Pertenezco" dark></v-radio>
@@ -64,9 +69,11 @@
                                         Registrar
                                     </v-btn>
                                 </v-card>
+                                <!---
                                 <v-btn color="brown lighten-1" @click="e1 = 1" dark>
                                     Continue
                                 </v-btn>
+                            -->
                             </v-stepper-content>
                         </v-stepper-items>
                     </v-stepper>
@@ -79,65 +86,58 @@
 import { fireApp } from '/src/dbfirebase.js';
 import firebase from "firebase/app";
 import 'firebase/database';
-
-
-//import ChildComponent from './ChildComponent.vue'
-
+import router from '../router'; // Asegúrate de que la ruta sea correcta
 
 export default {
-    data() {
-        return {
-            e1: 1,
-            contraseña2: '',
-            newEncuesta: {
-                user: '',
-                email: '',
-                contraseña: '',
-                indigenaEs: '',
-                indigenaPer: '',
-                comentarios: '',
-                puntaje: '',
-                gustoSiNo: '',
-            },
-            nombreRules: [
-                v => !!v || 'Por favor ingrese su nombre',
-                v => v.length <= 55 || 'Ingrese un nombre correcto',
-            ],
-            emailRules: [
-                v => !!v || 'Por favor ingrese su Email',
-                v => /.+@.+\..+/.test(v) || 'Ingrese un email valido',
-            ],
-            contraseñaRules: [
-                v => !!v || 'Por favor ingrese su Contraseña',
-            ],
-        }
-    },
-    methods: {
-        addUser: function() {
-            console.log('nuevo usuario' + this.newEncuesta)
-            firebase.database().ref('DATOS_ENCUESTA/' + this.newEncuesta.user).set({
-                user: this.newEncuesta.user,
-                email: this.newEncuesta.email,
-                contraseña: this.newEncuesta.contraseña,
-                indigenaEs: this.newEncuesta.indigenaEs,
-                indigenaPer: this.newEncuesta.indigenaPer,
-                comentarios: 'null',
-                puntaje: 'null',
-                gustoSiNo: 'null',
-            });
-            this.newEncuesta.user = '';
-            this.newEncuesta.email = '';
-            this.newEncuesta.contraseña = '';
-            this.newEncuesta.indigenaEs = '';
-            this.newEncuesta.indigenaPer = '';
-            this.contraseña2 = '';
-            this.comentarios = '';
-            this.puntaje = '';
-            this.gustoSiNo = '';
-
-        }
+  data() {
+    return {
+      e1: 1,
+      contraseña2: '',
+      newEncuesta: {
+        user: '',
+        email: '',
+        contraseña: '',
+        indigenaEs: '',
+        indigenaPer: '',
+      },
+      nombreRules: [
+        v => !!v || 'Por favor ingrese su nombre',
+        v => v.length <= 55 || 'Ingrese un nombre correcto',
+      ],
+      emailRules: [
+        v => !!v || 'Por favor ingrese su Email',
+        v => /.+@.+\..+/.test(v) || 'Ingrese un email valido',
+      ],
+      contraseñaRules: [
+        v => !!v || 'Por favor ingrese su Contraseña',
+      ],
     }
+  },
+  methods: {
+    addUser: function() {
+      console.log('nuevo usuario', JSON.stringify(this.newEncuesta)); // Usar JSON.stringify para mostrar los datos correctamente
+      firebase.database().ref('DATOS_ENCUESTA/' + this.newEncuesta.user).set({
+        user: this.newEncuesta.user,
+        email: this.newEncuesta.email,
+        contraseña: this.newEncuesta.contraseña,
+        indigenaEs: this.newEncuesta.indigenaEs,
+        indigenaPer: this.newEncuesta.indigenaPer,
+        comentarios: 'null', // Eliminar esta línea
+        puntaje: 'null', // Eliminar esta línea
+        gustoSiNo: 'null', // Eliminar esta línea
+      });
+      this.newEncuesta.user = '';
+      this.newEncuesta.email = '';
+      this.newEncuesta.contraseña = '';
+      this.newEncuesta.indigenaEs = '';
+      this.newEncuesta.indigenaPer = '';
+      this.contraseña2 = '';
+      router.push('/loginUsuario');
+    }
+  }
 }
 </script>
+
 <style scoped>
+/* Tus estilos aquí */
 </style>

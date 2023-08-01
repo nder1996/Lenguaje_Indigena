@@ -2,12 +2,12 @@
     <v-container class="mt-10" style='height:84vh !important'>
         <v-row justify="center">
             <v-card class="card_instrucciones">
-                <v-img style='object-fit:cover;filter: grayscale(100%);' height="250px" src="@/assets/presentacion.jpeg">
-                    <v-card-title class="white--text mt-8">
+                <v-img style='object-fit:cover;' height="250px" src="@/assets/presentacion.jpeg">
+                    <v-card-title class="white--text mt-8" style='display:flex;justify-content:flex-start;align-items:center;flex-dirrection:row'>
                         <v-avatar size="56" contain>
                             <img contain alt="user" src="@/assets/avatarPresentacion.jpeg" />
                         </v-avatar>
-                        <strong style='color:black !important;background-color:white !Important' class="ml-3">WOUNAAN</strong>
+                        <h6 style='color:white !important;width:30% !important;background-color:rgb(109, 76, 65,0.7) !important' class="ml-3">WOUNAAN</h6>
                     </v-card-title>
                 </v-img>
                 <v-card-text>
@@ -16,7 +16,7 @@
                         <v-timeline-item v-for="message in messages" :key="message.time" :color="message.color" small>
                             <div>
                                 <div class="font-weight-normal">
-                                    <strong>{{ message.from }}</strong> @{{ message.time }}
+                                    <strong>{{ message.from }}</strong> 
                                 </div>
                                 <div class="text-justify mt-3">{{ message.message }}</div>
                             </div>
@@ -47,17 +47,17 @@
 export default {
     data: () => ({
         messages: [{
-                from: "¿Que Es Khipar - App?",
+                from: "¿Qué Es Khipar - App?",
                 message: `Khipar es una app móvil, que permite  establecer una interacción con la cultura wounaan.`,
                 color: "yellow accent-4",
             },
             {
-                from: "¿Como Usar La App?",
+                from: "¿Como usar la App?",
                 message: `descarga la aplicacion , registrate y disfruta de la cultura wounan`,
                 color: "red darken-1",
             },
             {
-                from: "¿Cual Es El Objetivo De La App?",
+                from: "¿Cuál es el objetivo de la App?",
                 message: `El objetivo  de la app es preservar la lengua nativa woun meu,mediante la presentación  y práctica de vocablos.`,
                 color: "green darken-1",
             },

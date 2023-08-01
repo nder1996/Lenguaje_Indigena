@@ -2,15 +2,15 @@
     <div>
         <v-row justify="center">
             <v-dialog v-model="dialog" max-width="350">
-                <v-card dark outlined shaped style="background-color: #F2A922 !important;">
+                <v-card dark outlined shaped style="background-color: rgb(200, 151, 91) !important;">
                     <v-card-title class="text-h4 justify-center text--light"> <strong class='mb-2'>THUMAM KHUUR</strong> <p>¡Bienvenidos!</p>  </v-card-title>
                     <v-card-text class="text-justify mt-3">
-                        <v-img class='img-bienvenida' src="@/assets/imgBienvenida.png" style='object-fit:cover' />
+                        <v-img class='img-bienvenida' src="@/assets/presentacion_img.jpeg" style='object-fit:cover' />
                     </v-card-text>
                     <v-card-subtitle class="text-h5" align="center">
                         <strong class='mb-2' style='font-size:1.7rem'>khaubat maar phobor</strong>
                         <p style='font-size:1.3rem'>
-                          Interactua con la cultura wounaan  
+                           Interactúa con la cultura wounaan  
                         </p>
                     </v-card-subtitle>
                     <v-card-actions>
