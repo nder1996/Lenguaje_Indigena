@@ -1,12 +1,12 @@
 <template>
-  <div id='app' style='border:5px solid red !Important;padding: 0 !Important;'>
+  <div id='app' style='padding: 0 !Important;'>
     <v-app>
       <v-app-bar color="brown darken-1" class="navbar mb-2" app fluid>
         <v-app-bar elevation="0" color="brown darken-1" dense dark style="padding: 0 !important" fluid>
           <v-app-bar-nav-icon>
             <v-icon>mdi-chart-bubble</v-icon>
           </v-app-bar-nav-icon>
-          <v-toolbar-title>Khipar - App</v-toolbar-title>
+          <v-toolbar-title>KHIPAAR</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-btn text @click="cerrarSesionApp">
             <span>Cerrar sesion</span>
@@ -15,7 +15,7 @@
           </v-btn>
         </v-app-bar>
       </v-app-bar>
-      <v-footer style='padding: 0 !Important;' app>
+      <v-footer class='pa-0'  app>
         <v-card class="d-flex flex-column-reverse" elevation="0">
           <v-toolbar color="brown lighten-1" dark>
             <v-tabs v-model="tabs" centered style="width:100vw !important">
@@ -31,7 +31,7 @@
                 <instrucciones_bienvenida />
               </v-card>
             </v-tab-item>
-            <v-tab-item :transition="false" style="overflow:auto !important">
+            <v-tab-item :transition="false" style="overflow:auto !important;">
               <home_menu />
             </v-tab-item>
             <v-tab-item class="experiencia" :transition="false">
@@ -47,6 +47,9 @@
 
 <style>
 /* Estilos aquí */
+.v-footer .v-sheet.theme--light .v-footer--fixed{
+ padding: 0 !important;
+}
 </style>
 
 <script>
@@ -69,6 +72,7 @@ export default {
   methods: {
     cerrarSesionApp: function() {
       this.$root.$miVariableGlobal = '';
+      
       router.push('/loginUsuario');
     }
   }

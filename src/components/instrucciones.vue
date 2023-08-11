@@ -2,7 +2,7 @@
     <v-container class="mt-10" style='height:84vh !important'>
         <v-row justify="center">
             <v-card class="card_instrucciones">
-                <v-img style='object-fit:cover;' height="250px" src="@/assets/presentacion.jpeg">
+                <v-img style='object-fit:contain;' height="250px" src="@/assets/presentacion.jpeg">
                     <v-card-title class="white--text mt-8" style='display:flex;justify-content:flex-start;align-items:center;flex-dirrection:row'>
                         <v-avatar size="56" contain>
                             <img contain alt="user" src="@/assets/avatarPresentacion.jpeg" />
@@ -47,7 +47,7 @@
 export default {
     data: () => ({
         messages: [{
-                from: "¿Qué Es Khipar - App?",
+                from: "¿Qué Es KHIPAAR?",
                 message: `Khipar es una app móvil, que permite  establecer una interacción con la cultura wounaan.`,
                 color: "yellow accent-4",
             },
@@ -65,6 +65,11 @@ export default {
                 from: "La Cultura Wounaan",
                 message: `Es un pueblo indígena originario del departamento del choco y del valle del cauca.`,
                 color: "purple darken-4",
+            },
+            {
+                from: "Colaboradores",
+                message: `Andersons Arevalo(desarrollador de software), Isis Buelvas (asesora tesis), Ana Castiblanco,Natali Fuentes y Nelson Jiménez (investigadores), Nolberta Málaga y Jhon Fredy valencia (agentes interculturales Wounaan)`,
+                color: "blue-grey darken-4",
             },
         ],
     }),

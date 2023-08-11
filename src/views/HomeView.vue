@@ -2,9 +2,9 @@
     <div id='app' style='height:100vh;display:flex;justify-content:center;align-content:center;align-items:center;background-color: rgb(225, 213, 201, 0.5)  !important;'>
         <v-card color='#6D4C41' outlined shaped fluid width='95%' style='padding:0.7rem;' elevation='3' dark>
             <v-card-title class='d-flex justify-center align-items-center'>
-                <h1>BIENVENIDOS</h1>
+                <h1 style="font-size: 2.5rem;">BIENVENIDOS</h1>
             </v-card-title>
-            <v-card-subtitle class='mt-1 d-flex justify-center align-items-center'><strong>KHIPAR-APP</strong></v-card-subtitle>
+            <v-card-subtitle class='mt-1 d-flex justify-center align-items-center'><strong>KHIPAR</strong></v-card-subtitle>
             <v-card-text>
                 <v-form class="mt-10" style="padding:1rem" @submit.prevent="Verificar">
                     <v-text-field required :rules="nombreRules" placeholder="Ingrese su usuario" v-model="user" prepend-inner-icon="mdi-account-tie" outlined></v-text-field>
