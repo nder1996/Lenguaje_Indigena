@@ -24,7 +24,7 @@
                                 <v-card width="350">
                                     <v-card-title style='display:flex;flex-direction:column;justify-content:center;align-items:center'>
                                         <strong class='mb-2'>Vocales</strong>
-                                        Lenguaje Khipar-App
+                                        Lenguaje Khipar
                                     </v-card-title>
                                     <v-card-text>
                                         <video src="@/assets/vocales_wuonan.mp4" width="100%" controls></video>

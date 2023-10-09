@@ -3,12 +3,11 @@
        <v-row justify="center">
     <v-dialog
       v-model="dialog"
-      max-width="312"
+      max-width="492"
     >
       <v-card outlined shaped style="background-color: rgb(205, 151, 84,0.9) !important;" dark>
-     
        <v-card-title class="text-h6 text-center">
-           Para nosotros es importante saber tu opinión
+       Para nosotros es importante saber tu opinión
         </v-card-title>    
                  <v-card-text class="text-justify mt-3">
             <v-img src="@/assets/presentacion_img.jpeg" />

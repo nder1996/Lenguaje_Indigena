@@ -4,7 +4,7 @@
             <v-app-bar-nav-icon @click="drawer= !drawer" v-if="isMobile"></v-app-bar-nav-icon>
             <v-toolbar-title color='grey darken-3' class="text-uppercase">
                 <strong style=' color: rgb(85, 67, 45)'>
-                    Aplicacion Khipar-App
+                    Aplicacion Khipar
                 </strong>
             </v-toolbar-title>
             <v-spacer></v-spacer>

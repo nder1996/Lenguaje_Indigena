@@ -17,15 +17,18 @@
                     </v-toolbar>
                     <v-card-text class="mt-10">
                         <v-row>
-                            <v-card width="350">
-                                <v-card-title style='display:flex;flex-direction:column;justify-content:center;align-items:center'>
-                                    <strong class='mb-2'>Comandos</strong>
-                                    Lenguaje Khipar-App
-                                </v-card-title>
-                                <v-card-text>
-                                    <video src="@/assets/comandos_wuonan.mp4" width="100%" controls></video>
-                                </v-card-text>
-                            </v-card>
+                            <v-col cols="12" align="center" jusitfy="center">
+                                <v-card class='text-center' width="350">
+                                    <v-card-title
+                                        style='display:flex;flex-direction:column;justify-content:center;align-items:center'>
+                                        <strong class='mb-2'>Comandos</strong>
+                                        Lenguaje Khipar
+                                    </v-card-title>
+                                    <v-card-text class='text-center'>
+                                        <video src="@/assets/comandos_wuonan.mp4" width="100%" controls></video>
+                                    </v-card-text>
+                                </v-card>
+                            </v-col>
                         </v-row>
                     </v-card-text>
                 </v-card>

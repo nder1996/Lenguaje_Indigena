@@ -41,6 +41,7 @@ export default {
                 console.log("Equal to USER: " + data.val().user);
                 console.log("Equal to CONTRASEÑA: " + data.val().contraseña);
             });
+            //console.log('3'+3)
         }
     }
 }

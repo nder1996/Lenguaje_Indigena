@@ -2,7 +2,7 @@
     <v-container class="mt-10" style='height:84vh !important'>
         <v-row justify="center">
             <v-card class="card_instrucciones">
-                <v-img style='object-fit:cover;' height="250px" src="@/assets/presentacion.jpeg">
+                <v-img style='object-fit:contain;' height="250px" src="@/assets/presentacion.jpeg">
                     <v-card-title class="white--text mt-8" style='display:flex;justify-content:flex-start;align-items:center;flex-dirrection:row'>
                         <v-avatar size="56" contain>
                             <img contain alt="user" src="@/assets/avatarPresentacion.jpeg" />
@@ -47,24 +47,30 @@
 export default {
     data: () => ({
         messages: [{
-                from: "¿Qué Es Khipar - App?",
-                message: `Khipar es una app móvil, que permite  establecer una interacción con la cultura wounaan.`,
+                from: "¿Qué Es KHIPAAR?",
+                message: `Khipar es una app móvil que permite establecer una interacción con el vocabulario del pueblo indígena  Wounaan`,
                 color: "yellow accent-4",
             },
             {
                 from: "¿Como usar la App?",
-                message: `descarga la aplicacion , registrate y disfruta de la cultura wounan`,
+                message: `Descargar la aplicación, regístratarse e ingresar a el contenido de su interés.`,
                 color: "red darken-1",
             },
             {
                 from: "¿Cuál es el objetivo de la App?",
-                message: `El objetivo  de la app es preservar la lengua nativa woun meu,mediante la presentación  y práctica de vocablos.`,
+                message: `Preservar la lengua nativa Woun-Meu mediante la  práctica de vocablos.`,
                 color: "green darken-1",
             },
             {
                 from: "La Cultura Wounaan",
-                message: `Es un pueblo indígena originario del departamento del choco y del valle del cauca.`,
+                message: `Son un pueblo indígena originario de los departamentos del Chocó y Valle del Cauca.`,
                 color: "purple darken-4",
+            },
+            {
+                from: "Colaboradores",
+                message: `Andersons Arevalo(Desarrollador de software), Isis Buelvas (Asesora tesis), Ana Castiblanco,
+                Natali Fuentes y Nelson Jiménez (Investigadores), Nolberta Málaga y Jhon Fredy valencia (Dinamiazadores Wounaan)`,
+                color: "blue-grey darken-4",
             },
         ],
     }),

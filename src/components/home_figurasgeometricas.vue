@@ -3,9 +3,9 @@
         <v-row justify="center">
             <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
                 <template v-slot:activator="{ on, attrs }">
-                    <v-btn style='background-color:#F2A922' dark v-bind="attrs" v-on="on">
-                        <span style="padding:1rem !important">
-                            Figuras <br> Geométricas
+                    <v-btn style='background-color:#F2A922' dark v-bind="attrs" v-on="on" class="text-wrap-example">
+                        <span style="font-size:0.7rem !important;width: 100px !important;" class="text-wrap">
+                            Figuras Geométricas
                         </span>
                     </v-btn>
                 </template>
@@ -23,7 +23,7 @@
                                 <v-card width="350">
                                     <v-card-title style='display:flex;flex-direction:column;justify-content:center;align-items:center'>
                                         <strong class='mb-2'>Figuras Geométricas</strong>
-                                        Lenguaje Khipar-App
+                                        Lenguaje Khipar
                                     </v-card-title>
                                     <v-card-text>
                                         <video src="@/assets/figurasGeometricas_wounan.mp4" width="100%" controls></video>
@@ -37,7 +37,13 @@
         </v-row>
     </div>
 </template>
-<style scoped></style>
+<style scoped>
+
+.text-wrap {
+  white-space: normal !important; /* Establece el comportamiento de ajuste de línea */
+  
+}
+</style>
 <script>
 export default {
     data() {

@@ -17,7 +17,7 @@
             </v-col>
             <v-col class='column-login column-img' cols='0' sm='4' md='4' xl='4' lg='4'>
                 <div class='text_efect'>
-                    <h1 class='text-center'><strong>Khipar-App</strong></h1>
+                    <h1 class='text-center'><strong>Khipar</strong></h1>
                     <p class='text_gallery text-justify mt-2'>
                        Khipar es una app móvil, que permite  establecer una interacción con la cultura wounaan.
                     </p>

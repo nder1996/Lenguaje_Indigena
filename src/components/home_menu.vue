@@ -71,7 +71,7 @@
                 <v-col class="column" cols="8" sm="3" md="3">
                     <v-card class="mx-auto card_categoria" height='300px'>
                         <v-img height="150" src="@/assets/figurasgPresentacion.jpeg"></v-img>
-                        <v-card-title>Figuras Geométricas</v-card-title>
+                        <v-card-title>  Figuras Geométricas</v-card-title>
                         <v-card-text class="mt-2" align="center">
                             <v-chip>
                                 <home_figurasgeometricas />
@@ -103,7 +103,7 @@
                 </v-col>
                  <v-col class="column" cols="8" sm="3" md="3">
                     <v-card class="mx-auto card_categoria" height='300px'>
-                        <v-img height="150" src="@/assets/animalesPresentacion.jpeg"></v-img>
+                        <v-img height="150" src="@/assets/presentacion.jpeg"></v-img>
                         <v-card-title>Galería</v-card-title>
                         <v-card-text class="mt-2" align="center">
                             <v-chip>
@@ -123,7 +123,6 @@
 }
 
 .column {
-    #border: 2px solid red !important;
     margin: 0.5rem !important;
     padding: 0.2rem !important;
 }
