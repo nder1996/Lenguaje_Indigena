@@ -49,6 +49,7 @@ export default {
         messages: [{
                 from: "¿Qué Es KHIPAAR?",
                 message: `Khipar es una app móvil que permite establecer una interacción con el vocabulario del pueblo indígena  Wounaan`,
+
                 color: "yellow accent-4",
             },
             {
@@ -70,6 +71,7 @@ export default {
                 from: "Colaboradores",
                 message: `Andersons Arevalo(Desarrollador de software), Isis Buelvas (Asesora tesis), Ana Castiblanco,
                 Natali Fuentes y Nelson Jiménez (Investigadores), Nolberta Málaga y Jhon Fredy valencia (Dinamiazadores Wounaan)`,
+
                 color: "blue-grey darken-4",
             },
         ],

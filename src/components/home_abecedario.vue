@@ -23,7 +23,7 @@
                                         Lenguaje KHIPAR
                                     </v-card-title>
                                     <v-card-text>
-                                        <video src="@/assets/abecedario_wuonan.mp4" width="100%" controls></video>
+                                        <video src="@/assets/animales_wuonan.mp4" width="100%" controls></video>
                                     </v-card-text>
                                 </v-card>
                             </v-col>
