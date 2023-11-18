@@ -7,7 +7,7 @@
                         <v-avatar size="56" contain>
                             <img contain alt="user" src="@/assets/avatarPresentacion.jpeg" />
                         </v-avatar>
-                        <h6 style='color:white !important;width:30% !important;background-color:rgb(109, 76, 65,0.7) !important' class="ml-3">WOUNAAN</h6>
+                        <p style='color:white !important;width:60% !important;background-color:rgb(109, 76, 65,0.7) !important' class="ml-3">WOUNAAN</p>
                     </v-card-title>
                 </v-img>
                 <v-card-text>
@@ -73,6 +73,11 @@ export default {
                 Natali Fuentes y Nelson Jiménez (Investigadores), Nolberta Málaga y Jhon Fredy valencia (Dinamiazadores Wounaan)`,
 
                 color: "blue-grey darken-4",
+            },
+            {
+                from: "Referencia:(2021). Lorit. Cartilla de actividades.",
+                message: `https://repositoriosed.educacionbogota.edu.co`,
+                color: "amber accent-4"
             },
         ],
     }),

@@ -1,3 +1,10 @@
+<style>
+.v-toolbar__content{
+  padding: 7px !important;
+}
+</style>
+
+
 <template>
   <div id='app' style='padding: 0 !Important;'>
     <v-app>
@@ -6,10 +13,10 @@
           <v-app-bar-nav-icon>
             <v-icon>mdi-chart-bubble</v-icon>
           </v-app-bar-nav-icon>
-          <v-toolbar-title>KHIPAAR</v-toolbar-title>
+          <v-toolbar-title style="padding:0 !important">KHIPAAR</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-btn text @click="cerrarSesionApp">
-            <span>Cerrar sesion</span>
+            <span>Salir</span>
             &nbsp;&nbsp;
             <v-icon>mdi-login-variant </v-icon>
           </v-btn>
